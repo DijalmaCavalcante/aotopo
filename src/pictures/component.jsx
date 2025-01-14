@@ -9,7 +9,7 @@ import lucas1 from './assets/lucas1.jpg';
 import lucas2 from './assets/lucas2.jpg';
 import wallace1 from './assets/wallace1.jpg';
 import wallace2 from './assets/wallace2.jpg';
-import todos from './assets/todos.png';
+import todos from './assets/todos.jpg';
 
 
 
