@@ -1,20 +1,25 @@
 {
-  "dependencies": {
-    "@bake-js/-o-id": "^0.0.69",
-    "vite": "^6.0.7"
-  },
   "name": "aotopo",
-  "module": "index.ts",
+
   "type": "module",
+
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
+    "vite": "^6.0.7",
+    "@types/bun": "latest",
     "typescript": "^5.0.0"
   },
+
+  "dependencies": {
+    "@bake-js/-o-id": "^0.0.69"
+  },
+
   "scripts": {
     "dev": "bun vite",
     "build": "bun vite build",
     "preview": "bun vite preview"
-  }
+  },
+
+  "source": "src/index.js",
+  
+  "version": "0.0.1"
 }

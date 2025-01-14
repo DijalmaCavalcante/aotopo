@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-principal);
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-orange);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-orange-dark);
+}
