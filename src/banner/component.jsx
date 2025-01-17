@@ -8,7 +8,7 @@ function component () {
       <img class="banner__background" src="${background}" alt="background com imagem da banda junta"/>
       <div class="banner__scroll">
         <at-icons use="mouse" class="banner__mouse" alt="icone de mouse"></at-icons>
-        <span>Pra cima!</span>
+        <span>Pra cima</span>
       </div>
       <div class="banner__container">
         <at-logo alt="logo da banda"></at-logo>
