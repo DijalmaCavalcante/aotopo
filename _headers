@@ -1,5 +1,12 @@
-/assets/*
-  Content-Type: application/javascript
+/*
+  Access-Control-Allow-Origin: *
+  Content-Type: text/html; charset=UTF-8
+
+/assets/*.js
+  Content-Type: application/javascript; charset=UTF-8
 
 /assets/*.css
-  Content-Type: text/css
+  Content-Type: text/css; charset=UTF-8
+
+/assets/*.json
+  Content-Type: application/json; charset=UTF-8
