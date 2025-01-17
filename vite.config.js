@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  base: './', // Define base path relativo
+  base: './',
   build: {
-    outDir: 'dist',  // Diretorio de saída
+    outDir: 'dist',
     rollupOptions: {
-      input: 'index.html',  // Arquivo de entrada principal
+      input: 'index.html',
     }
-  }
+  },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: '_headers',
+          dest: ''
+        }
+      ]
+    })
+  ]
 });
