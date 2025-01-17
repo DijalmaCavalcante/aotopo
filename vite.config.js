@@ -2,9 +2,9 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
-    target: 'esnext' // Garante suporte a recursos modernos
-  },
-  server: {
-    port: 3000,
-  },
+    outDir: 'dist',  // Diretorio de saída
+    rollupOptions: {
+      input: 'index.html',  // Arquivo de entrada principal
+    }
+  }
 });
