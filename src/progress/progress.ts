@@ -1,14 +1,14 @@
 import { paint, repaint } from '@bake-js/-o-id/dom';
-import component from './component'
-import { attributeChanged, define, on } from '@bake-js/-o-id';
-import style from './style'
-import Echo from '@bake-js/-o-id/echo'
-import on from '@bake-js/-o-id/event'
+import component from './component';
+import { attributeChanged, define } from '@bake-js/-o-id';
+import style from './style';
+import Echo from '@bake-js/-o-id/echo';
+import on from '@bake-js/-o-id/event';
 
 @define('at-progress')
 @paint(component, style)
 class Progress extends Echo(HTMLElement) {
-  #value
+  #value;
 
   @attributeChanged('value')
   @repaint
