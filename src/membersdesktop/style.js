@@ -77,6 +77,33 @@ function style () {
       width: 100%;
     }
 
+    .teste {
+      align-items: end;
+      display: none;
+      gap: var(--spacing_inset-xs);
+      height: 100%;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .banner__icons {
+      align-self: center;
+      background-color: transparent;
+      justify-self: center;
+      display: flex;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+    }
+
+    .banner__icons:hover {
+      transform: scale(1.1);
+      background-color: var(--color-orange);
+    }
+
     .membersdesktop_group[current = "true"] {
       display: flex;
     }

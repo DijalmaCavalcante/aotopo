@@ -1,5 +1,5 @@
 import { html } from '@bake-js/-o-id/dom';
-import background from './background.jpg'
+import background from '../assets/backgroundbm.jpg'
 import { characters } from '../characters'
 
 function component (self) {  
