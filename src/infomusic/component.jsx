@@ -1,5 +1,5 @@
 import { html } from '@bake-js/-o-id/dom';
-import background from './background.jpg';
+import background from '../assets/musicbackground.jpg';
 
 function component () {  
   return html`
@@ -37,11 +37,11 @@ function component () {
               </div>
             </div>
             <div class="infomusic__icons">
-              <a href="#"> <at-icons use="spotify" aria-label="spotify"/> </a>
-              <a href="#"> <at-icons use="youtube" aria-label="youtube"/> </a>
-              <a href="#"> <at-icons use="apple" aria-label="apple"/> </a>
-              <a href="#"> <at-icons use="amazon" aria-label="amazon"/> </a>
-              <a href="#"> <at-icons use="deezer" aria-label="deezer"/> </a>
+              <a href="https://open.spotify.com/album/3DINa7nQ5CoJu41NGxWJu8" target="_blank"/> <at-icons use="spotify" aria-label="spotify"/> </a>
+              <a href="https://www.youtube.com/watch?v=LdfuPF84_OE" target="_blank"/> <at-icons use="youtube" aria-label="youtube"/> </a>
+              <a href="https://music.apple.com/us/album/fazer-valer-single/1781030693?uo=4" target="_blank"/> <at-icons use="apple" aria-label="apple"/> </a>
+              <a href="https://music.amazon.com.br/albums/B0DNKVJR7Z?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_hyU835S8Aizy8tJAA1AT3cKZM" target="_blank"/> <at-icons use="amazon" aria-label="amazon"/> </a>
+              <a href="https://www.deezer.com/album/672978831" target="_blank"/> <at-icons use="deezer" aria-label="deezer"/> </a>
             </div>
           </div>
         </div>
