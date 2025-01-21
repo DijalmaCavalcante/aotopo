@@ -1,5 +1,5 @@
 import { html } from '@bake-js/-o-id/dom';
-import logo from './logo.png'
+import logo from '../assets/logo.png'
 
 function component () {
   return html`
