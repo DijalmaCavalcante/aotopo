@@ -35,11 +35,11 @@ class Player extends Echo(HTMLElement) {
 
   @didPaint
   [onProgress] () {
-    let lastTime = 0; // Armazena o tempo da última atualização
+    let lastTime = 0;
 
     this.audio.addEventListener('timeupdate', () => {
       const { currentTime, duration } = this.audio;
-      const currentTimeInSeconds = Math.floor(currentTime); // Arredonda para segundos inteiros
+      const currentTimeInSeconds = Math.floor(currentTime);
       const init = { detail: ((currentTimeInSeconds / duration) * 100).toFixed(2) };
 
       if (currentTimeInSeconds !== lastTime) {
