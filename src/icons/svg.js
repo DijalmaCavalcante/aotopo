@@ -1,9 +1,12 @@
 import { html } from '@bake-js/-o-id/dom';
-import deezer from './assets/deezer.png'
-import youtube from './assets/youtube.png'
-import apple from './assets/apple.png'
 import amazon from './assets/amazon.png'
+import apple from './assets/apple.png'
+import deezer from './assets/deezer.png'
+import instagramOriginal from './assets/instagramOriginal.png'
 import spotify from './assets/spotify.png'
+import tiktokOriginal from './assets/tiktokOriginal.png'
+import youtube from './assets/youtube.png'
+import youtubeOriginal from './assets/youtubeOriginal.png'
 
 const svg = {
 	mouse: () =>
@@ -62,6 +65,20 @@ const svg = {
   spotify: () =>
     html`
       <img src="${spotify}" style="width: 24px"/>
+    `,
+  instagramoriginal: () =>
+    html`
+      <img src="${instagramOriginal}" style="width: 24px"/>
+    `,
+
+  tiktokoriginal: () =>
+    html`
+      <img src="${tiktokOriginal}" style="width: 24px"/>
+    `,
+
+  youtubeoriginal: () =>
+    html`
+      <img src="${youtubeOriginal}" style="width: 24px"/>
     `,
 };
 
