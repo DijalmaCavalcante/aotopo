@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
