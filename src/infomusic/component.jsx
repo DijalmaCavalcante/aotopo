@@ -6,7 +6,7 @@ function component () {
     <div class="infomusic">
       <div class="infomusic__container">
         <img class="infomusic__image" src="${background}" alt="capa da musica" />
-        <div class="infomusic__trackdetails">
+        <at-flexframe direction="column" gap="md" width="100%">
           <div class="infomusic__names">
             <span class="infomusic__musicname">Fazer valer</span>
             <span class="infomusic__bandname">Ao Topo</span>
@@ -44,7 +44,7 @@ function component () {
               <a href="https://www.deezer.com/album/672978831" target="_blank"/> <at-icons use="deezer" aria-label="deezer"/> </a>
             </div>
           </div>
-        </div>
+        </at-flexframe>
       </div>
     </div>
   `;
