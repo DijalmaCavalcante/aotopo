@@ -109,12 +109,12 @@ function style () {
     }
 
     .membersdesktop_description {
-      border: 3px solid orange;
+      border: 3px solid var(--color-orange);
       max-width: 25%;
       align-self: center;
       padding: var(--spacing_inset-xs);
       border-radius: var(--radius-medium);
-      background: rgba(255, 255, 255, 0.2); /* Fundo semitransparente */
+      background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(3px);
       display: flex;
       flex-direction: column;
