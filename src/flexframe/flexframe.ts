@@ -11,6 +11,30 @@ class Flexframe extends HTMLElement {
   #justify;
   #gap;
   #direction;
+  #padding;
+  #width;
+
+  get width() {
+    return (this.#width ??= "auto")
+  }
+
+  @attributeChanged("width")
+  @dispatchEvent("widthChanged")
+  @repaint
+  set width(value) {
+    this.#width = value;
+  }
+
+  get padding() {
+    return (this.#padding ??= "")
+  }
+
+  @attributeChanged("padding")
+  @dispatchEvent("paddingChanged")
+  @repaint
+  set padding(value) {
+    this.#padding = value;
+  }
 
   get direction() {
     return (this.#direction ??= "")
@@ -24,7 +48,7 @@ class Flexframe extends HTMLElement {
   }
 
   get gap() {
-    return (this.#gap ??= "")
+    return (this.#gap ??= "xs")
   }
 
   @attributeChanged("gap")
