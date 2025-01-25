@@ -1,9 +1,9 @@
+import { charactersArray } from '../characters';
 import { define } from "@bake-js/-o-id";
 import { paint, repaint } from "@bake-js/-o-id/dom";
 import component from "./component";
-import style from "./style";
 import on from "@bake-js/-o-id/event";
-import { charactersArray } from '../characters';
+import style from "./style";
 
 @define('at-members-mobile')
 @paint(component, style)
