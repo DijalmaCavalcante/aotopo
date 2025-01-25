@@ -4,6 +4,12 @@ function style (self) {
   const size = `var(--font-size-${self.size})`
   const weight = `var(--font-weight-${self.weight})`
   const color = `var(--color-${self.color})`
+  const shadow = `
+    2px 2px 0px var(--color-pure-black),
+    -2px 2px 0px var(--color-pure-black), 
+    2px -2px 0px var(--color-pure-black), 
+    -2px -2px 0px var(--color-pure-black);
+  `
 
   return css`
     :host {
@@ -11,7 +17,8 @@ function style (self) {
       font-size: ${size};
       font-weight: ${weight};
       align-self: ${self.align};
-      color: ${color}
+      color: ${color};
+      text-shadow: ${self.shadow ? shadow : ""}
     }
   `;
 }

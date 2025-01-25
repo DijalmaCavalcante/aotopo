@@ -11,6 +11,21 @@ class Text extends HTMLElement {
   #weight;
   #align;
   #color;
+  #shadow;
+
+  get shadow() {
+    return (this.#shadow ??= "")
+  }
+
+  @attributeChanged("shadow")
+  @dispatchEvent("shadowChanged")
+  @repaint
+  set shadow(value) {
+    console.log(value);
+    
+    const shadow = value ? value : ""
+    this.#shadow = shadow;
+  }
 
   get color() {
     return (this.#color ??= "pure-white")
