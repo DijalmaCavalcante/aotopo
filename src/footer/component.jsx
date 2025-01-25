@@ -7,9 +7,10 @@ function component () {
     <footer class="footer">
       <div class="footer__container">
         <img src=${logo} class="footer__logo"/>
-        <at-text size="micro">
-          © 2025 Ao Topo!
-        </at-text>
+        <at-flexframe direction="column" align="center" gap="nano">
+          <at-text size="micro">© 2025 Ao Topo!</at-text>
+          <a class="footer__link" href="mailto:aotopoband@gmail.com"><at-text size="micro">aotopoband@gmail.com</at-text></a>
+        </at-flexframe>
         <at-flexframe gap="xs">
           <a target="_blank" href=${link.instagram}><at-icons use="instagramOriginal"></at-icons></a>
           <a target="_blank" href=${link.youtube}><at-icons use="youtubeOriginal"></at-icons></a>

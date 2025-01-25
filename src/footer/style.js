@@ -30,43 +30,8 @@ function style () {
       max-width: 100px;
     }
 
-    .footer-email {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .footer-email:hover {
-        text-decoration: underline;
-    }
-
-    .footer-social-icons {
-        margin-top: 10px;
-    }
-
-    .social-icon {
-        margin: 0 5px;
-        display: inline-block;
-    }
-
-    .social-icon img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .footer-content::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: #fff;
-        margin: 10px 0;
-    }
-
-    .footer-copyright {
-        font-size: 14px;
-        margin-top: 10px;
+    .footer__link {
+      text-decoration: none;
     }
 
   `
