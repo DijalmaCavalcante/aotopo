@@ -1,8 +1,13 @@
+import { characters } from '../characters'
 import { html } from '@bake-js/-o-id/dom';
 import background from '../assets/backgroundbm.jpg'
-import { characters } from '../characters'
+import Bene from './bene'
+import Dijalma from './dijalma'
+import Kauan from './kauan'
+import Lucas from './lucas'
+import Wallace from './wallace'
 
-function component (self) {  
+function component (self) {
   return html`
     <section class="membersdesktop">
       <img class="membersdesktop_background" src="${background}" />
@@ -11,27 +16,11 @@ function component (self) {
         <div class="membersdesktop__line"></div>
       </div>
       <div class="membersdesktop_container">
-        <div class="membersdesktop_group" id="wallace" current=${self.current === 'wallace'}>
-          <img class="membersdesktop_description" src="${characters.wallace.description}" />
-          <img class="membersmobile__character" src="${characters.wallace.person}" />
-        </div>
-        <div class="membersdesktop_group" id="dijalma" current=${self.current === 'dijalma'}>
-          <img class="membersdesktop_description" src="${characters.dijalma.description}" />
-          <img class="membersmobile__character" src="${characters.dijalma.person}" />
-        </div>
-        <div class="membersdesktop_group" id="bene" current=${self.current === 'bene'}>
-          <img class="membersdesktop_description" src="${characters.bene.description}" />
-          <img class="membersmobile__character" src="${characters.bene.person}" />
-        </div>
-        <div class="membersdesktop_group" id="lucas" current=${self.current === 'lucas'}>
-          <img class="membersdesktop_description" src="${characters.lucas.description}" />
-          <img class="membersmobile__character" src="${characters.lucas.person}" />
-        </div>
-        <div class="membersdesktop_group" id="kauan" current=${self.current === 'kauan'}>
-          <img class="membersdesktop_description" src="${characters.kauan.description}" />
-          <img class="membersmobile__character" src="${characters.kauan.person}" />
-        </div>
-
+        ${Wallace(self)}
+        ${Dijalma(self)}
+        ${Bene(self)}
+        ${Lucas(self)}
+        ${Kauan(self)}
         <div class="membersdesktop_nav">
           <button class="membersdesktop__button" id="wallaceButton" current=${self.current === 'wallace'}>
             <img src="${characters.wallace.risk}" class="membersdesktop__person"/>

@@ -109,8 +109,21 @@ function style () {
     }
 
     .membersdesktop_description {
+      border: 3px solid orange;
       max-width: 25%;
       align-self: center;
+      padding: var(--spacing_inset-xs);
+      border-radius: var(--radius-medium);
+      background: rgba(255, 255, 255, 0.2); /* Fundo semitransparente */
+      backdrop-filter: blur(3px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing_inset-xs);
+    }
+
+    .membersdesktop__logo {
+      width: 84px;
     }
 
     .membersmobile__character {
