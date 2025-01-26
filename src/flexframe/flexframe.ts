@@ -37,7 +37,7 @@ class Flexframe extends HTMLElement {
   }
 
   get direction() {
-    return (this.#direction ??= "")
+    return (this.#direction ??= "row")
   }
 
   @attributeChanged("direction")
