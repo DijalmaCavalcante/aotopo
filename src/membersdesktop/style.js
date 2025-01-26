@@ -38,6 +38,7 @@ function style () {
       background-color: var(--color-orange);
       position: absolute;
       margin-top: 10px;
+      border-radius: 5%;
     }
 
     .membersdesktop__members {

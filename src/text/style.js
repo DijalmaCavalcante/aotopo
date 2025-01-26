@@ -16,7 +16,7 @@ function style (self) {
       font-family: 'maven pro';
       font-size: ${size};
       font-weight: ${weight};
-      align-self: ${self.align};
+      text-align: ${self.align};
       color: ${color};
       text-shadow: ${self.shadow ? shadow : ""}
     }

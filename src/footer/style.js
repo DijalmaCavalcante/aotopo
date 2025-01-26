@@ -8,6 +8,10 @@ function style () {
       display: flex;
       justify-content: center;
     }
+
+    .teste {
+      display: none;
+    }
     
     .footer__container {
       align-items: center;
@@ -32,6 +36,12 @@ function style () {
 
     .footer__link {
       text-decoration: none;
+    }
+
+    @media(width >= 596px) {
+      .teste {
+        display: block;
+      }
     }
 
   `

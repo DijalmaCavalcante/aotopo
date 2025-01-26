@@ -11,7 +11,7 @@ function component () {
           <at-text size="micro">© 2025 Ao Topo!</at-text>
           <a class="footer__link" href="mailto:aotopoband@gmail.com"><at-text size="micro">aotopoband@gmail.com</at-text></a>
         </at-flexframe>
-        <at-flexframe gap="xs">
+        <at-flexframe gap="xs" class="teste">
           <a target="_blank" href=${link.instagram}><at-icons use="instagramOriginal"></at-icons></a>
           <a target="_blank" href=${link.youtube}><at-icons use="youtubeOriginal"></at-icons></a>
           <a target="_blank" href=${link.tiktok}><at-icons use="tiktokOriginal"></at-icons></a>

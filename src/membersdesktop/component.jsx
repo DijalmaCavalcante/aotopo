@@ -12,7 +12,7 @@ function component (self) {
     <section class="membersdesktop">
       <img class="membersdesktop_background" src="${background}" />
       <div class="membersdesktop__title">
-        <span class="membersdesktop__members">Membros</span>
+        <at-text size="sm" class="membersdesktop__members">Membros</at-text>
         <div class="membersdesktop__line"></div>
       </div>
       <div class="membersdesktop_container">
@@ -38,7 +38,6 @@ function component (self) {
             <img src="${characters.kauan.risk}" class="membersdesktop__person"/>
           </button>
         </div>
-
       </div>
     </section>
   `

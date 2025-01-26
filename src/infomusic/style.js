@@ -26,44 +26,15 @@ function style () {
     }
 
     .infomusic__image {
-      border-radius: 12px;
+      align-self: center;
+      border-radius: var(--radius-medium);
       max-width: 200px;
       width: 100%;
-      align-self: center;
-    }
-
-    .infomusic__trackdetails {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing_inset-md);
-      width: 100%;
-    }
-
-    .infomusic__names {
-      align-items: center;
-      color: var(--color-pure-white);
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media(width >= 768px) {
-      .infomusic__names {
-        align-items: flex-start;
-      }
-    }
-
-    .infomusic__musicname {
-      font-size: var(--font-size-xs);
-      font-weight: var(--font-weight-medium);
-    }
-
-    .infomusic__bandname {
-      font-size: var(--font-size-nano);
     }
 
     @media (width >= 768px) {
-      .infomusic__bandname {
-        margin-bottom: var(--spacing_inset-xs);
+      .infomusic__name {
+        text-align: start !important;
       }
     }
 
@@ -73,6 +44,11 @@ function style () {
       flex-direction: column;
       gap: var(--spacing_inset-sm);
       width: 100%;
+    }
+
+    audio {
+      width: 100%;
+      border-radius: var(--radius-medium);
     }
 
     @media(width >= 768px) {
@@ -87,22 +63,6 @@ function style () {
       width: 100%;
     }
 
-    .informusic__playeractions {
-      align-items: center;
-      display: flex;
-      gap: var(--spacing_inset-xs);
-      justify-content: center;
-      width: 100%;
-      flex-direction: column;
-    }
-
-    @media(width >= 768px) {
-      .informusic__playeractions {
-        flex-direction: row;
-        gap: var(--spacing_inset-xs);
-      }
-    }
-
     .infomusic__icons {
       display: flex;
       gap: var(--spacing_inset-xs);
@@ -115,19 +75,6 @@ function style () {
     @media(width >= 768px) {
       .infomusic__icons {
         gap: var(--spacing_inset-nano);
-      }
-    }
-
-    .infomusic__progress {
-      display:flex; 
-      flex-direction:column; 
-      width:100%; 
-      gap:var(--spacing_inset-quarck);
-    }
-
-    @media(width >= 768px) {
-      .infomusic__progress {
-        margin-top:22px;
       }
     }
   `
