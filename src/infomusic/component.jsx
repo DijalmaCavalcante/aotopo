@@ -7,7 +7,7 @@ function component () {
     <div class="infomusic">
       <div class="infomusic__container">
         <img class="infomusic__image" src="${background}" alt="capa da musica" />
-        <at-flexframe direction="column" gap="md" width="100%">
+        <at-flexframe direction="column" gap="md" width="100%" justify="center" padding="quarck">
           <at-flexframe direction="column" gap="quarck">
             <at-text class="infomusic__name" weight="medium" align="center">Fazer valer</at-text>
             <at-text class="infomusic__name" size="nano" align="center">Ao Topo!</at-text>
