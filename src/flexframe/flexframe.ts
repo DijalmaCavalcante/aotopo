@@ -70,7 +70,7 @@ class Flexframe extends HTMLElement {
   }
 
   get justify() {
-    return (this.#justify ??= "")
+    return (this.#justify ??= "start")
   }
 
   @attributeChanged("justify")
