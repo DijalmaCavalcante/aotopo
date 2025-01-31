@@ -5,11 +5,11 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: 'index.html',
-    }
+    assetsDir: 'assets',  
+    rollupOptions: { input: 'index.html' },
+    modulePreload: { polyfill: true }
   },
+
   plugins: [
     viteStaticCopy({
       targets: [
