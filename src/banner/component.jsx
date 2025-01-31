@@ -12,9 +12,14 @@ function component () {
       </div>
       <div class="banner__container">
         <at-logo alt="logo da banda"></at-logo>
-        <a href=${link.instagram} target="_blank">
-          <at-icons class="banner__icons" use="strokeinstagram" alt="icone de instagram"/>
-        </a>
+        <at-flexframe>
+          <a href=${link.instagram} target="_blank">
+            <at-icons class="banner__icons" use="strokeinstagram" alt="icone de instagram"/>
+          </a>
+          <a href=${link.instagram} target="_blank">
+            <at-icons class="banner__icons" use="tiktokbranco" alt="icone de instagram"/>
+          </a>
+        </at-flexframe>
       </div>
     </section>
   `

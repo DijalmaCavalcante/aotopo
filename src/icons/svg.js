@@ -7,6 +7,7 @@ import spotify from './assets/spotify.png'
 import tiktokOriginal from './assets/tiktokOriginal.png'
 import youtube from './assets/youtube.png'
 import youtubeOriginal from './assets/youtubeOriginal.png'
+import tiktokbranco from './assets/tiktokbranco.png'
 
 const svg = {
 	mouse: () =>
@@ -79,6 +80,11 @@ const svg = {
   youtubeoriginal: () =>
     html`
       <img src="${youtubeOriginal}" style="width: 24px"/>
+    `,
+
+  tiktokbranco: () =>
+    html`
+      <img src="${tiktokbranco}" style="width: 36px"/>
     `,
 };
 

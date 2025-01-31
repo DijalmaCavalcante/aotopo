@@ -4,44 +4,38 @@ function style () {
   return css`
     .footer {
       background-color: #1b1b1b;
-      width: 100%;
       display: flex;
       justify-content: center;
+      width: 100%;
     }
 
-    .teste {
-      display: none;
-    }
-    
     .footer__container {
       align-items: center;
-      display: flex;
-      max-width: 1280px;
-      padding: var(--spacing_inset-md);
-      width: 100%;
-      justify-content: space-between;
       border-bottom: 1px solid var(--color-pure-white);
-      margin-bottom: var(--spacing_inset-lg);
-    }
-
-    .footer-content {
       display: flex;
       flex-direction: column;
-      align-items: center;
-    }
+      gap: var(--spacing_inset-xs);
+      justify-content: center;
+      margin-bottom: var(--spacing_inset-xs);
+      max-width: 1280px;
+      padding: var(--spacing_inset-xs);
+      width: 90%;
 
-    .footer__logo {
-      max-width: 100px;
-    }
-
-    .footer__link {
-      text-decoration: none;
+      img {
+        width: 104px;
+      }
     }
 
     @media(width >= 596px) {
-      .teste {
-        display: block;
+      .footer__container {
+        flex-direction: row;
+        justify-content: space-between;
       }
+    }
+
+    .footer__social {
+      display: flex;
+      gap: var(--spacing_inset-xs);
     }
 
   `

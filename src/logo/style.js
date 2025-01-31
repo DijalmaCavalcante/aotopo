@@ -3,6 +3,11 @@ import { css } from '@bake-js/-o-id/dom'
 function style () {
   return css`
     .banner_logo {
+      width: 250px;
+      z-index: 1;
+    }
+
+    .banner_logo[small] {
       width: 500px;
       z-index: 1;
     }

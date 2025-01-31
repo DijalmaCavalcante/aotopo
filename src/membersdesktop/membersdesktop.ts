@@ -3,7 +3,6 @@ import { paint, repaint } from "@bake-js/-o-id/dom";
 import component from "./component";
 import style from "./style";
 import on from "@bake-js/-o-id/event"
-import wallace from './wallace'
 
 @define('at-members-desktop')
 @paint(component, style)

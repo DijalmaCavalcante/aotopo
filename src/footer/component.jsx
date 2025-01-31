@@ -6,16 +6,16 @@ function component () {
   return html`
     <footer class="footer">
       <div class="footer__container">
-        <img src=${logo} class="footer__logo"/>
-        <at-flexframe direction="column" align="center" gap="nano">
-          <at-text size="micro">© 2025 Ao Topo!</at-text>
-          <a class="footer__link" href="mailto:aotopoband@gmail.com"><at-text size="micro">aotopoband@gmail.com</at-text></a>
+        <img src="${logo}" />
+        <at-flexframe direction="column" gap="quarck">
+          <at-text size="micro" align="center">© 2025 Ao Topo!</at-text>
+          <at-text size="micro" align="center">aotopoband@gmail.com</at-text>
         </at-flexframe>
-        <at-flexframe gap="xs" class="teste">
-          <a target="_blank" href=${link.instagram}><at-icons use="instagramOriginal"></at-icons></a>
-          <a target="_blank" href=${link.youtube}><at-icons use="youtubeOriginal"></at-icons></a>
-          <a target="_blank" href=${link.tiktok}><at-icons use="tiktokOriginal"></at-icons></a>
-        </at-flexframe>
+        <div class="footer__social">
+          <a target="_blank" href="${link.instagram}"><at-icons use="instagramoriginal"></at-icons></a>
+          <a target="_blank" href="${link.tiktok}"><at-icons use="tiktokoriginal"></at-icons></a>
+          <a target="_blank" href="${link.youtube}"><at-icons use="youtubeoriginal"></at-icons></a>
+        </div>
       </div>
     </footer>
   `;
