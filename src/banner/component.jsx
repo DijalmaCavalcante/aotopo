@@ -19,6 +19,9 @@ function component () {
           <a href=${link.instagram} target="_blank">
             <at-icons class="banner__icons" use="tiktokbranco" alt="icone de instagram"/>
           </a>
+          <a>
+            <at-icons class="banner__icons" use="merchandising" alt="icone de compra"/>
+          </a>
         </at-flexframe>
       </div>
     </section>

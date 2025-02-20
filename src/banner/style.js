@@ -76,7 +76,6 @@ function style () {
 
     .banner__icons:hover {
       transform: scale(1.1);
-      background-color: var(--color-orange);
     }
 `
 }

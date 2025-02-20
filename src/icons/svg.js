@@ -8,6 +8,7 @@ import tiktokOriginal from './assets/tiktokOriginal.png'
 import youtube from './assets/youtube.png'
 import youtubeOriginal from './assets/youtubeOriginal.png'
 import tiktokbranco from './assets/tiktokbranco.png'
+import merchandising from './assets/merchandising.png'
 
 const svg = {
 	mouse: () =>
@@ -85,6 +86,10 @@ const svg = {
   tiktokbranco: () =>
     html`
       <img src="${tiktokbranco}" style="width: 36px"/>
+    `,
+  merchandising: () =>
+    `
+      <img src="${merchandising}" style="width: 36px"/>
     `,
 };
 

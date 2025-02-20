@@ -6,7 +6,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',  
-    rollupOptions: { input: 'index.html' },
+    rollupOptions: {
+      input: 'index.html',
+      output: {
+        entryFileNames: '[name].js',  // Remove hash dos arquivos JS
+        chunkFileNames: '[name].js',  // Remove hash dos chunks
+        assetFileNames: '[name][extname]' // Remove hash dos assets (CSS, imagens, etc.)
+      }
+    },
     modulePreload: { polyfill: true }
   },
 
