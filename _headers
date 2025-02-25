@@ -1,12 +1,17 @@
 /*
   Access-Control-Allow-Origin: *
-  Content-Type: text/html; charset=UTF-8
 
-/assets/*.js
+/.js
   Content-Type: application/javascript; charset=UTF-8
 
-/assets/*.css
+/.css
   Content-Type: text/css; charset=UTF-8
 
-/assets/*.json
+/.json
   Content-Type: application/json; charset=UTF-8
+
+/.png
+  Content-Type: image/png
+
+/*.jpg
+  Content-Type: image/jpeg
