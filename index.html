@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/root.css">
     <title>Ao Topo!</title>
     <style>:not(:defined) { visibility: hidden; }</style>
   </head>
   <body>
     <main>
-      <at-pictures></at-pictures>
-      <at-members></at-members>
-      <at-hit></at-hit>
-      <at-banner></at-banner>
+      <div id="members"></div>
+      <div id="infomusic"></div>
+      <div id="banner"></div>
     </main>
-    <script type="module">
-      import "./src/index.js"
-    </script>
+    <script src="./loadpages.js"></script>
     <script>
       window.addEventListener('load', () => {
           setTimeout(() => {
