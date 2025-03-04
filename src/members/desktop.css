@@ -1,0 +1,118 @@
+.membersdesktop {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.membersdesktop__background {
+  background-repeat: no-repeat;
+  filter: brightness(0.3);
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.membersdesktop__header {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin-top: var(--spacing-xxl);
+  padding-top: var(--spacing_inset-sm);
+  position: relative;
+  width: 100%;
+}
+
+.membersdesktop__members {
+  color: white;
+  font-size: var(--font-size-md);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.membersdesktop__line {
+  background-color: var(--color-orange);
+  height: 15px;
+  margin-top: 10px;
+  position: absolute;
+  width: 200px;
+}
+
+.membersdesktop__container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  max-width: 1280px;
+  padding: var(--spacing_inset-xs);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.membersdesktop__member {
+  align-items: end;
+  display: none;
+  gap: var(--spacing_inset-xs);
+  height: 100%;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.membersdesktop__description {
+  align-items: center;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-medium);
+  border: 3px solid var(--color-orange);
+  color: var(--color-pure-white);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-nano);
+  gap: var(--spacing_inset-xs);
+  max-width: 25%;
+  padding: var(--spacing_inset-xs);
+}
+
+.membersdesktop__avatar {
+  height: 800px;
+  width: auto;
+}
+
+.membersdesktop__nav {
+  align-self: end;
+  display: flex;
+  gap: var(--spacing_inset-md);
+  justify-content: space-evenly;
+  padding-bottom: var(--spacing_inset-sm);
+  position: absolute;
+  width: 90%;
+  z-index: 2;
+}
+
+.membersdesktop__button {
+  background-color: var(--color-master);
+  border-radius: 9px;
+  border: 2px solid var(--color-master-light);
+  color: var(--color-pure-white);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing_inset-nano);
+  width: 100%;
+  align-items: center;
+  opacity: 0.8;
+  height: 60px;
+}
+
+.membersdesktop__nameimage {
+  width: 70%;
+  height: 100%;
+}
