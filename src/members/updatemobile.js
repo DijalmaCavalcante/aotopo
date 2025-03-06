@@ -1,23 +1,23 @@
 const members = [
   {
     name: "bene",
-    person: "/src/assets/bene.png",
-    risk: "/src/assets/beneName.png",
+    person: "/src/assets/bene/bene.png",
+    risk: "/src/assets/bene/beneName.png",
   },
   {
     name: "dijalma",
-    person: "/src/assets/dijalma.png",
-    risk: "/src/assets/dijalmaName.png",
+    person: "/src/assets/dijalma/dijalma.png",
+    risk: "/src/assets/dijalma/dijalmaName.png",
   },
   {
     name: "kauan",
-    person: "/src/assets/kauan.png",
-    risk: "/src/assets/kauanName.png",
+    person: "/src/assets/kauan/kauan.png",
+    risk: "/src/assets/kauan/kauanName.png",
   },
   {
     name: "lucas",
-    person: "/src/assets/lucas.png",
-    risk: "/src/assets/lucasName.png",
+    person: "/src/assets/lucas/lucas.png",
+    risk: "/src/assets/lucas/lucasName.png",
   },
 ]
 
