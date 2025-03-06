@@ -63,9 +63,15 @@
 }
 
 .banner__logo {
-  width: 650px;
+  width: 550px;
   z-index: 1;
   height: auto;
+}
+
+@media(width >= 400px) {
+  .banner__logo {
+    width: 650px;
+  }
 }
 
 @media(width >= 450px) {
