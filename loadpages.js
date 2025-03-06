@@ -27,4 +27,5 @@ document.addEventListener("DOMContentLoaded", function() {
   loadpages("banner", "src/banner/banner.html");
   loadpages("infomusic", "src/infomusic/infomusic.html");
   loadpages("members", "src/members/members.html");
+  loadpages("pictures", "src/pictures/pictures.html")
 });
