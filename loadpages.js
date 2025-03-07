@@ -20,7 +20,7 @@ function loadpages(id, file) {
 
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM carregado, iniciando loadpages...");
-  loadpages("banner", "/src/banner/banner.html");
+  loadpages("banner", "https://aotopoband.com/src/banner/banner.html");
   loadpages("infomusic", "/src/infomusic/infomusic.html");
   loadpages("members", "/src/members/members.html");
   loadpages("pictures", "/src/pictures/pictures.html");
