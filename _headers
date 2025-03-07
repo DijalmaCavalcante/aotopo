@@ -4,6 +4,9 @@
 /.js
   Content-Type: application/javascript; charset=UTF-8
 
+/loadpages.js
+Content-Type: application/javascript; charset=UTF-8
+
 /.css
   Content-Type: text/css; charset=UTF-8
 
