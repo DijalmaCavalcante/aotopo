@@ -1,26 +1,30 @@
 function loadpages(id, file) {
-  console.log(`Tentando carregar: ${file}`);
-
   fetch(file)
-    .then(response => {
-      console.log(`Resposta recebida para ${file}:`, response);
-      return response.text();
-    })
+    .then(response => response.text())
     .then(data => {
-      console.log(`Conteúdo carregado para ${id}:`, data);
       const element = document.getElementById(id);
-      if (element) {
-        element.innerHTML = data;
-      } else {
-        console.error(`Elemento #${id} não encontrado no DOM`);
-      }
+      element.innerHTML = data;
+
+      element.querySelectorAll("img").forEach(img => {
+        const src = img.getAttribute("src");
+        if (src) img.setAttribute("src", src);
+      });
+
+      element.querySelectorAll("script").forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
     })
     .catch(error => console.error(`Erro ao carregar ${file}:`, error));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM carregado, iniciando loadpages...");
-  loadpages("banner", "https://aotopoband.com/src/banner/banner.html");
+  loadpages("banner", "/src/banner/banner.html");
   loadpages("infomusic", "/src/infomusic/infomusic.html");
   loadpages("members", "/src/members/members.html");
   loadpages("pictures", "/src/pictures/pictures.html");
