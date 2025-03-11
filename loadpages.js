@@ -29,4 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
   loadpages("members", "/src/members/members.html");
   loadpages("pictures", "/src/pictures/pictures.html");
   loadpages("footer", "/src/footer/footer.html");
+  loadpages("merchandising", "/src/merchandising/merchandising.html");
 });

@@ -1,14 +1,11 @@
 {
   "name": "aotopo",
-  "type": "module",
+  "version": "0.0.1",
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5.0.0",
     "vite": "^6.1.0",
     "vite-plugin-static-copy": "^2.2.0"
-  },
-  "dependencies": {
-    "@bake-js/-o-id": "^0.0.69"
   },
   "scripts": {
     "dev": "vite",
@@ -16,5 +13,5 @@
     "preview": "vite preview"
   },
   "source": "src/index.js",
-  "version": "0.0.1"
+  "type": "module"
 }
