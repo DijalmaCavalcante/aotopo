@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import path from 'path';
 
 export default defineConfig({
   base: '/',
@@ -7,7 +8,10 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',  
     rollupOptions: {
-      input: 'index.html',
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        loadpages: path.resolve(__dirname, 'loadpages.js') // Garante que loadpages.js será incluído
+      },
       output: {
         entryFileNames: '[name].js',  // Remove hash dos arquivos JS
         chunkFileNames: '[name].js',  // Remove hash dos chunks
