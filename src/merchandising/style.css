@@ -16,6 +16,15 @@
   width: 100%;
 }
 
+.merchandising__header {
+  padding: var(--spacing_inset-md);
+  height: 100px;
+  position: absolute;
+  top: 0;
+  max-width: 1440px;
+  z-index: 1;
+}
+
 .merchandising__container {
   padding: var(--spacing_inset-md);
   height: 100%;
