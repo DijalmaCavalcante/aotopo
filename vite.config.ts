@@ -27,6 +27,5 @@ export default defineConfig({
         { src: 'src/**/*.html', dest: 'src' }, // Copia os arquivos HTML para dist/src/
       ]
     })
-    
   ]
 });
