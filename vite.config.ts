@@ -24,11 +24,9 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        {
-          src: '_headers',
-          dest: ''
-        }
+        { src: 'src/**/*.html', dest: 'src' }, // Copia os arquivos HTML para dist/src/
       ]
     })
+    
   ]
 });
