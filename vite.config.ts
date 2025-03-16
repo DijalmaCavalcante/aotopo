@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  base: '/',
+  base: '/src',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -20,8 +20,9 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'src/**/*.html', dest: 'src' }  // Copia os arquivos HTML para a pasta dist/src/
+        { src: 'src/**/*', dest: 'src' }  // Copia todos os arquivos dentro de src para dist/src
       ]
     })
+    
   ]
 });
