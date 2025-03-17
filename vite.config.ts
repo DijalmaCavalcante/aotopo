@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  base: '/src',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
