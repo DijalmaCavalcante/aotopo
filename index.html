@@ -19,6 +19,12 @@
       <div id="banner"></div>
     </main>
     <script src="./loadpages.js" type="module"></script>
-    <script src="./initscroll.js" type="module"></script>
+    <script>
+      window.onload = function() {
+        setTimeout(() => {
+            window.scrollTo(0, document.body.scrollHeight)
+        }, 100)
+      }
+    </script>
   </body>
 </html>
