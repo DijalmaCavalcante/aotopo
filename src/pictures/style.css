@@ -1,5 +1,5 @@
 .pictures {
-  background-color: #1b1b1b;
+  background-color: #0f0e0e;
   width: 100%;
 }
 
@@ -9,8 +9,8 @@
   gap: 10px;
   max-width: 1024px;
   margin: 0 auto;
-  padding: var(--spacing_inset-xs);
   flex-wrap: wrap;
+  padding: var(--spacing_inset-md);
 }
 
 .pictures__container img:nth-child(16) { display: none; }
