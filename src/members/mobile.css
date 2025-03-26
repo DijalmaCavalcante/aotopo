@@ -2,11 +2,8 @@
   display: none;
   padding: var(--spacing_inset-md);
   background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0);
   background: radial-gradient(circle, rgba(180, 180, 180, 0.4) 10%, transparent 50%), radial-gradient(circle, rgba(150, 150, 150, 0.3) 20%, transparent 80%), repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.07) 2px, transparent 6px);
   background-color: #201f1f;
-  filter: contrast(1.2);
-
 }
 
 .membersmobile__container {
@@ -14,11 +11,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxl);
-  height: auto;
-  justify-content: end;
   position: relative;
   width: 100%;
-
 }
 
 .membersmobile__header {
@@ -52,7 +46,6 @@
   max-width: 90%;
   padding: var(--spacing_inset-xs);
   position: relative;
-  z-index: 1;
 }
 
 .membersmobile__actions {
@@ -60,21 +53,13 @@
   display: flex;
   height: 100%;
   justify-content: space-between;
-  left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
-}
 
-.membersmobile__back,
-.membersmobile__next {
-  border-radius: 50%;
-  color: var(--color-pure-white);
-  cursor: pointer;
-  height: 42px;
-  position: relative;
-  width: 42px;
+  img {
+    cursor: pointer;
+  }
 }
 
 .membersmobile__avatar {
@@ -90,7 +75,7 @@
 
 .membersmobile__member {
   width: 330px;
-  height: 530px;
+  height: auto;
 }
 
 @media( width >= 420px) {
@@ -114,7 +99,6 @@
   display: flex;
   padding: var(--spacing_inset-nano) var(--spacing_inset-xs);
   width: 50%;
-  z-index: 1;
   position: absolute;
   height: 8%;
 }
