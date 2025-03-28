@@ -12,7 +12,7 @@
 
 @media (width >= 1280px) {
   .banner {
-    background-image: url('src/assets/background.webp');
+    background-image: url('/src/assets/background.webp');
   }
 }
 
