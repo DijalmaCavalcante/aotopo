@@ -57,6 +57,8 @@
   font-size: var(--font-size-nano);
   max-width: 25%;
   padding: var(--spacing_inset-xs);
+  flex-direction: column;
+  gap: var(--spacing_inset-xs);
 }
 
 .membersdesktop__avatar {
