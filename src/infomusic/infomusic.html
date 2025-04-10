@@ -5,34 +5,35 @@
 </head>
 <body>
   <section class="hit">
-    <span class="hit__promo-text">Confira nosso último lançamento!</span>
+    <h2 class="hit__promo-text">Confira nosso último lançamento!</h2>
     <div class="infomusic">
       <div class="infomusic__container">
         <img class="infomusic__image" src="/src/assets/musicbackground.jpg" alt="capa do álbum Ao Topo!" />
         <div class="infomusic__infocontainer">
           <div class="infomusic__title">
-            <span class="infomusic__music">Fazer valer</span>
-            <span class="infomusic__band">Ao Topo!</span>
+            <h3 class="infomusic__music">Fazer Valer</h3>
+            <p class="infomusic__band">Ao Topo!</p>
           </div>
           <div class="infomusic__mediacontrols">
             <audio controls>
-              <source src="/src/infomusic/music.mp3" type="audio/mpeg" alt="player de musica">
+              <source src="/src/infomusic/music.mp3" type="audio/mpeg">
+              Seu navegador não suporta o elemento de áudio.
             </audio> 
-            <div class="infomusic__streams">
+            <div class="infomusic__streams" aria-label="Ouça em plataformas de streaming">
               <a href="https://music.amazon.com.br/albums/B0DNKVJR7Z?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_hyU835S8Aizy8tJAA1AT3cKZM" target="_blank">
-                <img src="/src/assets/icons/amazon.png" class="infomusic__icon" />
+                <img src="/src/assets/icons/amazon.png" class="infomusic__icon" alt="Ouvir no Amazon Music" />
               </a>
               <a href="https://music.apple.com/us/album/fazer-valer-single/1781030693?uo=4" target="_blank">
-                <img src="/src/assets/icons/apple.png" class="infomusic__icon" />
+                <img src="/src/assets/icons/apple.png" class="infomusic__icon" alt="Ouvir no Apple Music" />
               </a>
               <a href="https://open.spotify.com/album/3DINa7nQ5CoJu41NGxWJu8" target="_blank">
-                <img src="/src/assets/icons/spotify.png" class="infomusic__icon" />
+                <img src="/src/assets/icons/spotify.png" class="infomusic__icon" alt="Ouvir no Spotify" />
               </a>
               <a href="https://www.deezer.com/album/672978831" target="_blank">
-                <img src="/src/assets/icons/deezer.png" class="infomusic__icon" />
+                <img src="/src/assets/icons/deezer.png" class="infomusic__icon" alt="Ouvir no Deezer" />
               </a>
               <a href="https://www.youtube.com/watch?v=LdfuPF84_OE" target="_blank">
-                <img src="/src/assets/icons/youtube.png" class="infomusic__icon" />
+                <img src="/src/assets/icons/youtube.png" class="infomusic__icon" alt="Ouvir no Youtube" />
               </a>
             </div>
           </div>
