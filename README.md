@@ -33,11 +33,6 @@ O site conta com as seguintes seções principais:
 
 O site está hospedado no **Cloudflare Pages**, com build feito automaticamente via Vite.
 
-## 📁 Organização dos Arquivos
-
-├── index.html ├── style.css ├── main.js ├── src/ │ ├── sections/ # Seções reutilizáveis │ ├── infomusic.js # Lógica da seção InfoMusic │ └── ...
-
-
 ## 💼 Objetivo Profissional
 
 Este projeto foi desenvolvido como um **exemplo real de aplicação web**, demonstrando minha capacidade de:
@@ -47,7 +42,3 @@ Este projeto foi desenvolvido como um **exemplo real de aplicação web**, demon
 - Integrar com APIs externas
 - Organizar projetos com **Vite** e **Bun**
 - Fazer deploy moderno com **Cloudflare**
-
----
-
-Feito com 💙 por [Dijalma Cavalcante](https://www.linkedin.com/in/dijalma-cavalcante-a2b70823a/)
