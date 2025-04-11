@@ -23,9 +23,6 @@ O site conta com as seguintes seções principais:
 
 ## 🚧 Funcionalidades em Desenvolvimento
 
-- **Integração com a API do Spotify** via o projeto [`aotopo-api`](https://github.com/DijalmaCavalcante/aotopo-api):  
-  Em breve, a seção *InfoMusic* será atualizada automaticamente com os dados da última música lançada pela banda, como nome, capa, link direto e data de lançamento.
-
 - **Lojinha da Banda**:  
   Está em desenvolvimento uma seção de e-commerce simples para a venda de produtos oficiais da banda, como camisetas, adesivos e outros itens.
 
