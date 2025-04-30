@@ -36,44 +36,39 @@
 }
 
 .banner__logo {
-  width: 550px;
+  width: 250px; /* começa pequeno para mobile */
 }
 
-@media(width >= 400px) {
+@media (min-width: 400px) {
   .banner__logo {
-    width: 650px;
+    width: 300px;
   }
 }
 
-@media(width >= 450px) {
+@media (min-width: 500px) {
+  .banner__logo {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner__logo {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
   .banner__logo {
     width: 700px;
   }
 }
 
-@media(width >= 500px) {
-  .banner__logo {
-    width: 750px;
-  }
-}
-
-@media(width >= 768px) {
+@media (min-width: 1200px) {
   .banner__logo {
     width: 800px;
   }
 }
 
-@media(width >= 1000px) {
-  .banner__logo {
-    width: 850px;
-  }
-}
-
-@media(width >= 1200px) {
-  .banner__logo {
-    width: 900px;
-  }
-}
 
 .banner__links {
   display: flex;
