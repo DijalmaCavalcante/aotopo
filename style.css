@@ -4,6 +4,12 @@
   font-family: var(--font-family-principal);
 }
 
+body {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
 a {
   text-decoration: none;
 }

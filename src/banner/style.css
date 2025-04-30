@@ -36,44 +36,22 @@
 }
 
 .banner__logo {
-  width: 250px; /* começa pequeno para mobile */
+  width: clamp(300px, 60vw, 800px);
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-@media (min-width: 400px) {
-  .banner__logo {
-    width: 300px;
-  }
-}
-
-@media (min-width: 500px) {
-  .banner__logo {
-    width: 400px;
-  }
-}
-
-@media (min-width: 768px) {
-  .banner__logo {
-    width: 600px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .banner__logo {
-    width: 700px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .banner__logo {
-    width: 800px;
-  }
-}
-
 
 .banner__links {
   display: flex;
-  gap: var(--spacing_inset-xs);
+  flex-wrap: wrap; /* permite quebrar linha se faltar espaço */
+  gap: clamp(8px, 4vw, 24px); /* gap responsivo */
+  justify-content: center; /* centraliza os links */
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
 }
+
 
 .banner__icons {
   cursor: pointer;
