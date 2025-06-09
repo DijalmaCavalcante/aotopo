@@ -6,8 +6,8 @@
 .pictures__container {
   display: grid;
   flex-wrap: wrap;
-  gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing_inset-xs);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
   margin: 0 auto;
   max-width: 1024px;
   padding: var(--spacing_inset-md);
