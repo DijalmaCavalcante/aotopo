@@ -84,3 +84,7 @@
   top: -1px;
   transform: rotate(36deg);
 }
+
+.banner__iconwrapper {
+  pointer-events: none;
+}
