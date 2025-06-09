@@ -13,5 +13,8 @@
     "preview": "vite preview"
   },
   "source": "src/index.js",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "react-router-dom": "^7.6.0"
+  }
 }
