@@ -70,7 +70,7 @@
 .banner__iconwrapper {
   position: relative;
   display: inline-block;
-  pointer-events: none; /* Manteve-se aqui conforme seu código original */
+  pointer-events: none;
 }
 
 .badge {
