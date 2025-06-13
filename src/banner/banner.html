@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="/src/banner/style.css">
+  <link rel="preload" href="/src/banner/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/src/banner/style.css"></noscript>
   <link rel="preload" as="image" href="/src/assets/logo.webp" type="image/webp">
 </head>
 <body>
   <section class="banner" aria-label="Banner principal com logo e links para redes sociais">
     <div class="banner__container">
-      <img src="/src/assets/logo.webp" class="banner__logo" alt="logo da banda ao topo"/>
+      <img src="/src/assets/logo.webp" class="banner__logo" alt="logo da banda ao topo" width="300" height="282" />
       <nav class="banner__links" aria-label="Links para redes sociais">
         <a href="https://www.instagram.com/oficialaotopo/" target="_blank">
-          <img src="/src/assets/icons/strokeinstagram.webp" class="banner__icons" alt="Ícone do Instagram" />
+          <img src="/src/assets/icons/strokeinstagram.webp" width="40" height="40" class="banner__icons" alt="Ícone do Instagram" />
         </a>
         <a href="https://www.tiktok.com/@aotopooficial?_t=ZM-8tGMMulhLJ0&_r=1" target="_blank">
-          <img src="/src/assets/icons/stroketiktok.webp" class="banner__icons" alt="Ícone do TikTok" />
+          <img src="/src/assets/icons/stroketiktok.webp" width="40" height="40" class="banner__icons" alt="Ícone do TikTok" />
         </a>
         <a href="https://www.youtube.com/@AoTopoband/videos" target="_blank">
-          <img src="/src/assets/icons/strokeyoutube.webp" class="banner__icons" alt="Ícone do YouTube" />
+          <img src="/src/assets/icons/strokeyoutube.webp" width="40" height="40" class="banner__icons" alt="Ícone do YouTube" />
         </a>
         <a class="banner__iconwrapper" href="/src/merchandising/merch.html">
-          <img src="/src/assets/icons/strokemarket.webp" class="banner__icons" alt="Ícone de Loja - Em breve" />
+          <img src="/src/assets/icons/strokemarket.webp" width="40" height="40" class="banner__icons" alt="Ícone de Loja - Em breve" />
           <span class="badge">breve</span>
         </a>
       </nav>
