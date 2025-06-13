@@ -1,6 +1,6 @@
 .hit {
   align-items: center;
-  background-image: url("/src/assets/backgroundgrafiato.webp");
+  background-image: url("/src/assets/backgroundgrafiatoMobile.webp");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -8,6 +8,13 @@
   gap: var(--spacing_inset-sm);
   padding: var(--spacing_inset-huge) var(--spacing_inset-sm);
 }
+
+@media (min-width: 968px) {
+  .hit {
+    background-image: url("/src/assets/backgroundgrafiato.webp");
+  }
+}
+
 
 .hit__promo-text {
   color: var(--color-pure-white);
