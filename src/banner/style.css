@@ -1,19 +1,14 @@
-.banner {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-image: url('/src/assets/backmobile.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 @media (width >= 1280px) {
   .banner {
     background-image: url('/src/assets/background.webp');
   }
+}
+
+.banner {
+  background-image: url('/src/assets/backmobile.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .banner::before {
@@ -26,24 +21,27 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 .banner__container {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
   justify-content: center;
+  height: 100%;
   position: absolute;
 }
-
 .banner__logo {
   width: clamp(300px, 50vw, 500px);
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-
-
 .banner__links {
   display: flex;
   flex-wrap: wrap;
@@ -53,14 +51,16 @@
   padding: 1rem;
   text-align: center;
 }
+.banner__icons {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
 
 
 .banner__icons {
   cursor: pointer;
-  display: flex;
-  height: 40px;
   transition: transform 0.3s ease;
-  width: 100%;
 }
 
 .banner__icons:hover {
@@ -70,6 +70,7 @@
 .banner__iconwrapper {
   position: relative;
   display: inline-block;
+  pointer-events: none; /* Manteve-se aqui conforme seu código original */
 }
 
 .badge {
@@ -83,8 +84,4 @@
   right: -16px;
   top: -1px;
   transform: rotate(36deg);
-}
-
-.banner__iconwrapper {
-  pointer-events: none;
 }
