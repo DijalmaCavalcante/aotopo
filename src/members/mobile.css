@@ -1,4 +1,4 @@
-.membersmobile, .membersdesktop {
+.membersmobile {
   display: none;
   padding: var(--spacing_inset-md);
   background-image: url('/src/assets/backmobile.webp');
@@ -28,6 +28,7 @@
 .membersmobile__members {
   color: white;
   font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
   position: absolute;
   top: 0;
   z-index: 1;
