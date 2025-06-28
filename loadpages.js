@@ -24,13 +24,16 @@ function loadpages(id, file) {
 
 document.addEventListener("DOMContentLoaded", function () {
   Promise.all([
+    loadpages("header", "/src/header/header.html"),
     loadpages("banner", "/src/banner/banner.html"),
     loadpages("infomusic", "/src/infomusic/infomusic.html"),
     loadpages("members", "/src/members/members.html"),
     loadpages("pictures", "/src/pictures/pictures.html"),
-    loadpages("footer", "/src/footer/footer.html")
+    loadpages("footer", "/src/footer/footer.html"),
+    // pages
+    loadpages("merchandising", "/src/merchandising/merch.html"),
+    loadpages("createAccount", "/src/oauth/createAccount/createAccount.html")
   ]).then(() => {
-    // Garante um pequeno atraso visual para segurança (100ms)
     setTimeout(() => {
       document.documentElement.classList.remove("loading");
     }, 100);
