@@ -10,11 +10,11 @@
 
   <input type="email" id="email" placeholder="Email" />
   <input type="password" id="password" placeholder="Senha" />
-  <button onclick="signUp()">Cadastrar</button>
-  <button onclick="signIn()">Entrar</button>
+  <button id="signup">Cadastrar</button>
+  <button id="signin">Entrar</button>
 
   <script type="module">
-    import { supabase } from '/src/services/supabase/client.js'
+    import { supabase } from '../../services/supabase/client.js'
 
     async function signUp() {
       const email = document.getElementById('email').value
@@ -37,10 +37,12 @@
         alert('Erro: ' + error.message)
       } else {
         alert('Login feito com sucesso!')
-        // Redirecionar para página protegida, se quiser:
-        // window.location.href = '/painel.html'
       }
     }
+
+    // Coloca os eventos nos botões
+    document.getElementById('signup').addEventListener('click', signUp)
+    document.getElementById('signin').addEventListener('click', signIn)
   </script>
 </body>
 </html>
