@@ -20,7 +20,7 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'src/**/*', dest: 'src' }  // Copia todos os arquivos dentro de src para dist/src
+        { src: 'src/**/*', dest: 'src' }
       ]
     })
     

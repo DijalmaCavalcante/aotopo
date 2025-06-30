@@ -68,6 +68,7 @@
 .banner__iconwrapper {
   position: relative;
   display: inline-block;
+  pointer-events: none;
 }
 
 .badge {

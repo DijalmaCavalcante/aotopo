@@ -39,7 +39,3 @@
 /loadpages.js
   Content-Type: application/javascript; charset=UTF-8
   Cache-Control: public, max-age=86400
-
-/services/supabase/client.js
-  Content-Type: application/javascript; charset=UTF-8
-  Cache-Control: public, max-age=86400
