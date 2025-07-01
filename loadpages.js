@@ -1,16 +1,3 @@
-const pageIds = [
-  "header",
-  "banner",
-  "infomusic",
-  "members",
-  "pictures",
-  "footer",
-  // páginas individuais:
-  "merchandising",
-  "createAccount",
-  "login"
-]
-
 const hiddenPages = ["merchandising", "createAccount"]
 
 function loadpages(id, file) {

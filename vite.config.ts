@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   base: '/',
@@ -7,7 +8,10 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      input: 'index.html',
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        account: resolve(__dirname,'src/oauth/createAccount/accountCreate.html'),
+      },
       output: {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].js',
@@ -16,13 +20,11 @@ export default defineConfig({
     },
     modulePreload: { polyfill: true }
   },
-
   plugins: [
     viteStaticCopy({
       targets: [
         { src: 'src/**/*', dest: 'src' }
       ]
     })
-    
   ]
-});
+})
