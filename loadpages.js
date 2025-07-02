@@ -1,4 +1,4 @@
-const hiddenPages = ["merchandising"]
+const hiddenPages = ["merchandising", "createAccount"]
 
 function loadpages(id, file) {
   return fetch(file)
@@ -8,7 +8,9 @@ function loadpages(id, file) {
       element.innerHTML = data
 
       if (hiddenPages.includes(id)) {
-        element.style.display = "none"
+        element.style.display = 'none'
+      } else {
+        element.style.display = 'block'
       }
 
       element.querySelectorAll("img").forEach(img => {

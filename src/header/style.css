@@ -1,13 +1,13 @@
 .header {
   align-items: center;
+  background-color: var(--color-master);
   display: flex;
   justify-content: center;
   padding: var(--spacing_inset-xs);
-  background-color: var(--color-master);
 
   a {
     color: var(--color-pure-white);
-    text-decoration: underline;
     cursor: pointer;
+    text-decoration: underline;
   }
 }
