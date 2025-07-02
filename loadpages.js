@@ -1,4 +1,4 @@
-const hiddenPages = ["merchandising", "createAccount"]
+const hiddenPages = ["merchandising"]
 
 function loadpages(id, file) {
   return fetch(file)
