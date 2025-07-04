@@ -1,34 +1,92 @@
 .createAccount {
   align-items: center;
+  background-image: url('/src/assets/background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   height: 100vh;
   justify-content: center;
+  position: relative;
   width: 100%;
+
+  &&::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .createAccount__container {
+  -webkit-backdrop-filter: blur(10px);
   align-items: center;
-  border: 1px solid black;
+  backdrop-filter: blur(10px);
+  background-color: rgba(200, 200, 200, 0.2);
+  border-radius: var(--radius-medium);
+  box-shadow: 0 0 15px rgba(234, 96, 13, 0.2), 0 0 40px rgba(234, 96, 13, 0.15), 0 0 80px rgba(234, 96, 13, 0.1);
   display: flex;
   flex-direction: column;
   gap: var(--spacing_inset-xs);
-  height: 500px;
-  justify-content: center;
+  height: 400px;
+  justify-content: space-between;
   padding: var(--spacing_inset-lg);
+  position: absolute;
   text-align: center;
   width: 400px;
+  border: 3px solid var(--color-orange);
 
   input {
+    background-color: var(--color-master);
+    border-radius: 8px;
+    border: 2px solid var(--color-pure-white);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    padding: 12px;
+    transition: border-color 0.3s ease;
     width: 100%;
+
+    &&:focus {
+      border-color: var(--color-orange);
+    }
   }
+
+  h1 {
+    color: var(--color-pure-white);
+    padding-bottom: var(--spacing_inset-lg);
+  }
+}
+
+.createAccount__data {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing_inset-xs);
+  width: 100%;
 }
 
 .createAccount__actions {
   display: flex;
   gap: var(--spacing_inset-xs);
   width: 100%;
+  padding-top: var(--spacing_inset-xs);
 }
 
 .createAccount__action {
   width: 100%;
+  background-color: var(--color-pure-black);
+  padding: var(--spacing_inset-xs);
+  border: none;
+  color: var(--color-pure-white);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-nano);
+  cursor: pointer;
+
+  &&:hover {
+    border: 1px solid var(--color-orange);
+  }
 }
