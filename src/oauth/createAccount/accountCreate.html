@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/root.css"
 </head>
 <body>
-  <h2>Login / Cadastro</h2>
-
-  <input type="email" id="email" placeholder="Email" />
-  <input type="password" id="password" placeholder="Senha" />
-  <button id="signup">Cadastrar</button>
-  <button id="signin">Entrar</button>
+  <div class="createAccount">
+    <div class="createAccount__container">
+      <h1>Login / Cadastro</h1>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Senha" />
+      <div class="createAccount__actions">
+        <button id="signin" class="createAccount__action">Entrar</button>
+        <button id="signup" class="createAccount__action">Cadastrar</button>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="./accountCreate.js"></script>
 </body>
