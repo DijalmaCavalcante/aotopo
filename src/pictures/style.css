@@ -1,43 +1,75 @@
 .pictures {
   background-color: #0f0e0e;
   width: 100%;
+  overflow: hidden;
 }
 
+/* DESKTOP & TABLET */
 .pictures__container {
   display: grid;
-  flex-wrap: wrap;
-  gap: var(--spacing_inset-xs);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  gap: var(--spacing_inset-xs);
   margin: 0 auto;
   max-width: 1024px;
   padding: var(--spacing_inset-md);
 }
 
-.pictures__container img:nth-child(16) { display: none; }
-.pictures__container img:nth-child(19) { display: none; }
+.pictures__container img {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
 
-@media(width >= 768px) {
+/* CARROSSEL PARA MOBILE */
+@media (max-width: 767px) {
+  .pictures__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    scroll-padding-left: 1rem;
+  }
+
+  .pictures__container img {
+    flex: 0 0 80%;
+    max-width: 280px;
+    scroll-snap-align: center;
+  }
+
+  /* Esconde scrollbar no mobile */
+  .pictures__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pictures__container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1055px) {
   .pictures__container {
     grid-template-columns: repeat(3, 1fr);
   }
-  .pictures__container img:nth-child(16) { display: none; }
-  .pictures__container img:nth-child(19) { display: none; }
+
+  .pictures__container img:nth-child(16),
+  .pictures__container img:nth-child(19) {
+    display: none;
+  }
 }
 
-@media(width >= 1056px) {
+/* DESKTOP */
+@media (min-width: 1056px) {
   .pictures__container {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .pictures__container img:nth-child(16) { display: block; }
-  .pictures__container img:nth-child(19) { display: block; }
+  .pictures__container img:nth-child(16),
+  .pictures__container img:nth-child(19) {
+    display: block;
+  }
 }
-
-.pictures__container img {
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
