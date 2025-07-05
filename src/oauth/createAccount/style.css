@@ -72,19 +72,21 @@
   display: flex;
   gap: var(--spacing_inset-xs);
   width: 100%;
-  padding-top: var(--spacing_inset-xs);
 }
 
 .createAccount__action {
-  width: 100%;
+  align-items: center;
   background-color: var(--color-pure-black);
-  padding: var(--spacing_inset-xs);
-  border: none;
-  color: var(--color-pure-white);
-  font-weight: var(--font-weight-medium);
   border-radius: var(--radius-medium);
-  font-size: var(--font-size-nano);
+  border: 1px solid transparent;
+  color: var(--color-pure-white);
   cursor: pointer;
+  display: flex;
+  font-size: var(--font-size-nano);
+  font-weight: var(--font-weight-medium);
+  justify-content: center;
+  padding: var(--spacing_inset-nano) var(--spacing_inset-xs);
+  width: 100%;
 
   &&:hover {
     border: 1px solid var(--color-orange);

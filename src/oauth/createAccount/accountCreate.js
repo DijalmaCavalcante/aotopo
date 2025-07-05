@@ -9,6 +9,8 @@
         alert('Erro: ' + error.message)
       } else {
         alert('Verifique seu email para confirmar o cadastro.')
+        document.getElementById('email').value = ''
+        document.getElementById('password').value = '' 
       }
     }
 

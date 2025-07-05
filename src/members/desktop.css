@@ -57,11 +57,12 @@
   border: 3px solid var(--color-orange);
   color: var(--color-pure-white);
   display: flex;
+  flex-direction: column;
   font-size: var(--font-size-nano);
+  gap: var(--spacing_inset-xs);
   max-width: 25%;
   padding: var(--spacing_inset-xs);
-  flex-direction: column;
-  gap: var(--spacing_inset-xs);
+  height: auto;
 }
 
 .membersdesktop__avatar {
