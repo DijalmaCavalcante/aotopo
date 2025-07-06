@@ -6,6 +6,17 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 80vh;
+  position: relative;
+}
+
+.membersmobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .membersmobile__container {
@@ -100,5 +111,5 @@
   padding: var(--spacing_inset-nano) var(--spacing_inset-xs);
   width: 50%;
   position: absolute;
-  height: 8%;
+  height: auto;
 }

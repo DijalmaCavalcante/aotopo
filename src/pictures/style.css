@@ -4,7 +4,6 @@
   overflow: hidden;
 }
 
-/* DESKTOP & TABLET */
 .pictures__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
@@ -22,7 +21,6 @@
   height: auto;
 }
 
-/* CARROSSEL PARA MOBILE */
 @media (max-width: 767px) {
   .pictures__container {
     display: flex;
@@ -39,7 +37,6 @@
     scroll-snap-align: center;
   }
 
-  /* Esconde scrollbar no mobile */
   .pictures__container::-webkit-scrollbar {
     display: none;
   }
@@ -50,7 +47,6 @@
   }
 }
 
-/* TABLET */
 @media (min-width: 768px) and (max-width: 1055px) {
   .pictures__container {
     grid-template-columns: repeat(3, 1fr);
@@ -62,7 +58,6 @@
   }
 }
 
-/* DESKTOP */
 @media (min-width: 1056px) {
   .pictures__container {
     grid-template-columns: repeat(4, 1fr);
