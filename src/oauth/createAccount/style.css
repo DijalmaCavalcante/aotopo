@@ -1,4 +1,4 @@
-header {
+.createAccoun__header {
   position:absolute;
   z-index: 1;
   padding: var(--spacing_inset-giant) var(--spacing_inset-lg);
