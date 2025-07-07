@@ -23,7 +23,8 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'src/**/*', dest: 'src' }
+        { src: 'src/**/*', dest: 'src' },
+        { src: '_redirects', dest: '' }
       ]
     })
   ]
