@@ -4,7 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  display: none;
   height: 100vh;
   justify-content: center;
   min-height: 100vh;
@@ -58,7 +58,12 @@
 
 .membersdesktop__member {
   align-items: end;
+  display: none;
   justify-content: space-around;
+
+  #bene {
+    display: none;
+  }
 }
 
 .membersdesktop__description {

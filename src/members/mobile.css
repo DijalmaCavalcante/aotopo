@@ -1,5 +1,5 @@
 .membersmobile {
-  display: none;
+  display: flex;
   padding: var(--spacing_inset-md);
   background-image: url('/src/assets/backmobile.webp');
   background-size: cover;
