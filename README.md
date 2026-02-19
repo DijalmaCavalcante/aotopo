@@ -1,41 +1,73 @@
-# Ao Topo — Website Oficial da Banda 🎸
+# React + TypeScript + Vite
 
-Este é o site oficial da **banda Ao Topo**, desenvolvido com foco em performance, organização e boas práticas em JavaScript puro (Vanilla JS), HTML e CSS. O projeto representa não apenas a presença online da banda, mas também serve como uma vitrine do meu trabalho com desenvolvimento web do zero, sem uso de frameworks.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🔍 Sobre o Projeto
+Currently, two official plugins are available:
 
-O site conta com as seguintes seções principais:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **Banner**: Apresentação da banda com destaque visual.
-- **InfoMusic**: Mostra a **última música lançada** pela banda (atualmente de forma manual).
-- **Membros**: Lista dos integrantes da banda.
-- **Pictures**: Galeria com fotos e registros da banda.
-- **Footer**: Contato e redes sociais.
+## React Compiler
 
-## ⚙️ Tecnologias Utilizadas
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla)**
-- **[Vite](https://vitejs.dev/)** – Para build e desenvolvimento local rápido.
-- **[Bun](https://bun.sh/)** – Utilizado para scripts e organização do projeto.
-- **Cloudflare Pages** – Hospedagem estática do site.
+## Expanding the ESLint configuration
 
-## 🚧 Funcionalidades em Desenvolvimento
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- **Lojinha da Banda**:  
-  Está em desenvolvimento uma seção de e-commerce simples para a venda de produtos oficiais da banda, como camisetas, adesivos e outros itens.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## 🌐 Deploy
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-O site está hospedado no **Cloudflare Pages**, com build feito automaticamente via Vite.
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 💼 Objetivo Profissional
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Este projeto foi desenvolvido como um **exemplo real de aplicação web**, demonstrando minha capacidade de:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-- Construir interfaces do zero com **JavaScript puro**
-- Trabalhar com **componentização sem frameworks**
-- Integrar com APIs externas
-- Organizar projetos com **Vite** e **Bun**
-- Fazer deploy moderno com **Cloudflare**
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

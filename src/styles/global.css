@@ -1,0 +1,23 @@
+@import './root.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+  font-family: var(--font-family-principal);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app__mainContent {
+  padding-top: 100px;
+  height: 200vh;
+}
