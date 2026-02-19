@@ -1,64 +1,53 @@
+import { useState, useEffect } from "react";
+import "./style.css";
 
-import React from 'react';
-import './style.css';
+const NAV_LINKS = [
+  { label: "Sobre", href: "/sobre" },
+  { label: "Música", href: "/musica" },
+  { label: "Vídeos", href: "/videos" },
+  { label: "Shows", href: "/shows" },
+  { label: "Loja", href: "/loja" },
+];
 
-interface HeaderProps {
-  showLogo?: boolean;
-  children?: React.ReactNode;
-}
+function Header({ hideLogo = false, ctaLabel, onCtaClick }) {
+  const [scrolled, setScrolled] = useState(false);
 
-const Header: React.FC<HeaderProps> = ({ showLogo = true, children }) => {
-  const [scrolled, setScrolled] = React.useState(false);
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 10) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerClassName = `header__container ${scrolled ? 'header__container--scrolled' : ''}`;
-  const hamburgerClassName = `header__hamburger ${isMenuOpen ? 'header__hamburger--open' : ''}`;
-  const mobileNavClassName = `header__mobileNav ${isMenuOpen ? 'header__mobileNav--open' : ''}`;
-
   return (
-    <header className={headerClassName}>
-      <div className="header__content">
-        {showLogo && <div className="header__logo">Ao Topo!</div>}
-        
-        {/* Desktop Navigation */}
-        <div className="header__desktopNav">
-          {children}
-        </div>
-
-        {/* Hamburger Button */}
-        <button className={hamburgerClassName} onClick={toggleMenu} aria-label="Toggle menu">
-          <div className="header__hamburgerBar" />
-          <div className="header__hamburgerBar" />
-          <div className="header__hamburgerBar" />
-        </button>
+    <header className={`header__container ${scrolled ? "header__container--scrolled" : ""}`}>
+      <div className="header__inner">
+        {!hideLogo && (
+          <div className="header__logo">
+            <span className="header__logoText">Logo</span>
+          </div>
+        )}
+        <nav className="header__navigation">
+          <ul className="header__menu">
+            {NAV_LINKS.map((link, index) => (
+              <li key={index} className="header__menuItem">
+                <a href={link.href} className="header__link">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        {ctaLabel && (
+          <button className="header__ctaButton" onClick={onCtaClick}>
+            {ctaLabel}
+          </button>
+        )}
       </div>
-
-      {/* Mobile Navigation */}
-      <nav className={mobileNavClassName}>
-        {children}
-      </nav>
     </header>
   );
-};
+}
 
 export default Header;

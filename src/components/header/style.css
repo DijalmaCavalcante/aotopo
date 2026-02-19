@@ -3,118 +3,97 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: var(--spacing-4) var(--spacing-8);
-  background-color: #1a1a1a;
   z-index: var(--z-fixed);
-  transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
-  border-bottom: 1px solid transparent;
+  background-color: #0d0d0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 0.35s ease, backdrop-filter 0.35s ease;
 }
 
 .header__container--scrolled {
-  background-color: rgba(26, 26, 26, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(13, 13, 13, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.header__content {
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: var(--spacing-4) var(--spacing-8);
+  gap: var(--spacing-8);
 }
 
 .header__logo {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: white;
-  z-index: 10; /* Ensure logo is above mobile nav */
-}
-
-.header__desktopNav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-4);
+  flex-shrink: 0;
 }
 
-/* HAMBURGER (hidden on desktop) */
-.header__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 24px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
+.header__logoImage {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__logoText {
+  font-family: var(--font-family-principal);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.header__navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  list-style: none;
+  margin: 0;
   padding: 0;
-  z-index: 10; /* Ensure hamburger is above mobile nav */
 }
 
-.header__hamburgerBar {
-  width: 24px;
-  height: 2px;
-  background: white;
+.header__menuItem {
+  display: flex;
+  align-items: center;
+}
+
+.header__link {
+  font-family: var(--font-family-principal);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-master-lighter);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: #ffffff;
+}
+
+.header__ctaButton {
+  flex-shrink: 0;
+  font-family: var(--font-family-principal);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: #0d0d0d;
+  background-color: #ffffff;
+  border: none;
   border-radius: var(--radius-pill);
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  padding: var(--spacing-2) var(--spacing-6);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
-/* MOBILE NAV (hidden on desktop) */
-.header__mobileNav {
-  display: none;
-}
-
-
-/* === MOBILE STYLES === */
-@media (max-width: 768px) {
-  .header__desktopNav {
-    display: none;
-  }
-
-  .header__hamburger {
-    display: flex;
-  }
-
-  .header__hamburger--open .header__hamburgerBar:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .header__hamburger--open .header__hamburgerBar:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  .header__hamburger--open .header__hamburgerBar:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-  .header__mobileNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-8);
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding-top: var(--spacing-32);
-
-    background-color: rgba(26, 26, 26, 0.98);
-    backdrop-filter: blur(10px);
-    
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-    
-    font-size: var(--font-size-lg);
-    z-index: 5; /* BUG FIX: Ensure nav is below logo/hamburger */
-  }
-
-  .header__mobileNav--open {
-    transform: translateY(0);
-  }
+.header__ctaButton:hover {
+  opacity: 0.88;
 }

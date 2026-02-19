@@ -16,6 +16,38 @@
   --spacing-24: 96px;  /* 6rem */
   --spacing-32: 128px; /* 8rem */
 
+  /* Colors */
+  --color-orange-darker: #D34D00;
+  --color-orange-dark: #DF5700;
+  --color-orange: #EA600D;
+  --color-orange-light: #F66A1A;
+  --color-orange-lighter: #FF7425;
+  --color-orange-lightest: #FF8739;
+
+  --color-blue-darker: #1C4D6C;
+  --color-blue-dark: #1A6089;
+  --color-blue: #1474A7;
+  --color-blue-light: #508AB5;
+  --color-blue-lighter: #76A0C4;
+  --color-blue-lightest: #9AB7D3;
+
+  --color-ocean-darker: #277083;
+  --color-ocean-dark: #2A8EA7;
+  --color-ocean: #2AADCC;
+  --color-ocean-light: #60BAD4;
+  --color-ocean-lighter: #86C8DD;
+  --color-ocean-lightest: #A6D6E5;
+
+  --color-master-darker: #000000;
+  --color-master-dark: #292929;
+  --color-master: #4E4E4E;
+  --color-master-light: #777777;
+  --color-master-lighter: #A2A2A2;
+  --color-master-lightest: #D0D0D0;
+
+  --color-pure-white: #fff;
+  --color-pure-black: #000;
+
   /* Font Size */
   --font-size-xs: 0.75rem;   /* 12px - labels pequenos */
   --font-size-sm: 0.875rem;  /* 14px - texto secundário */
