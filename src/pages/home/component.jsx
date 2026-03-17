@@ -1,8 +1,8 @@
 
-import Header from './components/header/component';
-import Hero from './components/hero/component';
+import Header from '@components/header';
+import Hero from '@components/hero';
 
-function App() {
+function Home() {
 
   return (
     <>
@@ -36,4 +36,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

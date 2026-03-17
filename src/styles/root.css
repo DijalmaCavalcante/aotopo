@@ -58,6 +58,12 @@
   --font-size-2xl: 2rem;     /* 32px - títulos h2 */
   --font-size-3xl: 2.5rem;   /* 40px - títulos h1 */
   --font-size-4xl: 3rem;     /* 48px - hero titles */
+  --font-size-5xl: 3.5rem;     /* 56px - hero titles */
+  --font-size-6xl: 4rem;     /* 64px - hero titles */
+  --font-size-7xl: 4.5rem;     /* 72px - hero titles */
+  --font-size-8xl: 5rem;     /* 80px - hero titles */
+  --font-size-9xl: 5.5rem;     /* 88px - hero titles */
+  --font-size-10xl: 6rem;     /* 96px - hero titles */
 
   /* Font Family */
   --font-family-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;

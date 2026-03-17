@@ -1,0 +1,59 @@
+.text__content {
+  font-family: var(--font-family-principal);
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Size ───────────────────────────────────────────────── */
+.text__content--size-xs   { font-size: var(--font-size-xs); }
+.text__content--size-sm   { font-size: var(--font-size-sm); }
+.text__content--size-base { font-size: var(--font-size-base); }
+.text__content--size-md   { font-size: var(--font-size-md); }
+.text__content--size-lg   { font-size: var(--font-size-lg); }
+.text__content--size-xl   { font-size: var(--font-size-xl); }
+.text__content--size-2xl  { font-size: var(--font-size-2xl); }
+.text__content--size-3xl  { font-size: var(--font-size-3xl); }
+.text__content--size-4xl  { font-size: var(--font-size-4xl); }
+.text__content--size-5xl  { font-size: var(--font-size-5xl); }
+.text__content--size-6xl  { font-size: var(--font-size-6xl); }
+.text__content--size-7xl  { font-size: var(--font-size-7xl); }
+.text__content--size-8xl  { font-size: var(--font-size-8xl); }
+.text__content--size-9xl  { font-size: var(--font-size-9xl); }
+.text__content--size-10xl { font-size: var(--font-size-10xl); }
+
+/* ─── Weight ─────────────────────────────────────────────── */
+.text__content--weight-regular  { font-weight: var(--font-weight-regular); }
+.text__content--weight-medium   { font-weight: var(--font-weight-medium); }
+.text__content--weight-semibold { font-weight: var(--font-weight-semibold); }
+.text__content--weight-bold     { font-weight: var(--font-weight-bold); }
+
+/* ─── Color ──────────────────────────────────────────────── */
+.text__content--color-default  { color: var(--color-master-dark); }
+.text__content--color-subtle   { color: var(--color-master); }
+.text__content--color-muted    { color: var(--color-master-light); }
+.text__content--color-inverted { color: var(--color-pure-white); }
+.text__content--color-orange   { color: var(--color-orange); }
+.text__content--color-blue     { color: var(--color-blue); }
+.text__content--color-ocean    { color: var(--color-ocean); }
+
+/* ─── Align ──────────────────────────────────────────────── */
+.text__content--align-left   { text-align: left; }
+.text__content--align-center { text-align: center; }
+.text__content--align-right  { text-align: right; }
+
+/* ─── Line Height ────────────────────────────────────────── */
+.text__content--lh-tight   { line-height: var(--line-height-tight); }
+.text__content--lh-normal  { line-height: var(--line-height-normal); }
+.text__content--lh-relaxed { line-height: var(--line-height-relaxed); }
+
+/* ─── Utilitários ────────────────────────────────────────── */
+.text__content--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text__content--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

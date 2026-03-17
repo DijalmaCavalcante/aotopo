@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import "./style.css";
+import { headerscroll } from "./headerscroll.js";
 
 const NAV_LINKS = [
   { label: "Sobre", href: "/sobre" },
@@ -10,16 +10,7 @@ const NAV_LINKS = [
 ];
 
 function Header({ hideLogo = false, ctaLabel, onCtaClick }) {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const scrolled = headerscroll(60);
 
   return (
     <header className={`header__container ${scrolled ? "header__container--scrolled" : ""}`}>
