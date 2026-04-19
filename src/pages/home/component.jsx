@@ -12,7 +12,7 @@ function Home() {
         title={
           <>AO TOPO<span style={{ color: "var(--color-orange)" }}>!</span></>
         }
-        subtitle="De Guarulhos pro mundo"
+        subtitle="De Guarulhos pro mund"
         buttons={[
           {
             label: "Ouça Fazer Valer",
