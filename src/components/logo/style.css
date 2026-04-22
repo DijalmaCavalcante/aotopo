@@ -1,0 +1,20 @@
+.logo__container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+  
+.logo__container--size-xs { width: 64px; }
+.logo__container--size-sm { width: 96px; }
+.logo__container--size-md { width: 128px; }
+.logo__container--size-lg { width: 192px; }
+.logo__container--size-xl { width: 256px; }

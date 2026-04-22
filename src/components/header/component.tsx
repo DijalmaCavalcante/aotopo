@@ -1,41 +1,31 @@
 import "./style.css";
 import { headerscroll } from "./headerscroll.js";
+import Logo from '@components/logo/component'
 
-const NAV_LINKS = [
-  { label: "Sobre", href: "/sobre" },
-  { label: "Música", href: "/musica" },
-  { label: "Vídeos", href: "/videos" },
-  { label: "Shows", href: "/shows" },
-  { label: "Loja", href: "/loja" },
-];
-
-function Header({ hideLogo = false, ctaLabel, onCtaClick }) {
+function Header() {
   const scrolled = headerscroll(60);
 
   return (
-    <header className={`header__container ${scrolled ? "header__container--scrolled" : ""}`}>
-      <div className="header__inner">
-        {!hideLogo && (
-          <div className="header__logo">
-            <span className="header__logoText">Logo</span>
-          </div>
-        )}
+    <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
+      <div className="header__container">
+        <div className="header__logo">
+          <Logo size='xs'/>
+        </div>
         <nav className="header__navigation">
           <ul className="header__menu">
-            {NAV_LINKS.map((link, index) => (
-              <li key={index} className="header__menuItem">
-                <a href={link.href} className="header__link">
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            <li className="header__menuItem"><a href="/sobre">Sobre</a></li>
+            <li className="header__menuItem"><a href="/musica">Música</a></li>
+            <li className="header__menuItem"><a href="/videos">Vídeos</a></li>
+            <li className="header__menuItem"><a href="/shows">Shows</a></li>
+            <li className="header__menuItem"><a href="/loja">Loja</a></li>
           </ul>
         </nav>
-        {ctaLabel && (
-          <button className="header__ctaButton" onClick={onCtaClick}>
-            {ctaLabel}
-          </button>
-        )}
+        <div className="header__medias">
+          <a>ins</a>
+          <a>ttk</a>
+          <a>ytu</a>
+          <button className="header__ctaButton">Ouça Agora</button>
+        </div>
       </div>
     </header>
   );
