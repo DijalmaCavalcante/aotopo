@@ -1,6 +1,5 @@
-
-import Header from '@components/header';
-import Hero from './hero';
+import Header from '@components/header/component';
+import Hero from './hero/component';
 
 function Home() {
   return (
