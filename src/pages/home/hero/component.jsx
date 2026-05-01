@@ -1,10 +1,11 @@
 import Hero from '@components/hero/component';
+import Text from '@components/text/component';
 
 function HomeHero () {
   return (
     <Hero
       title={
-        <>AO TOPO<span style={{ color: "var(--color-orange)" }}>!</span></>
+        <>AO TOPO<Text as="span" color="orange">!</Text></>
       }
       buttons={[
       {

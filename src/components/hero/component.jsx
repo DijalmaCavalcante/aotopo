@@ -56,7 +56,7 @@ export default function Hero({
         {socialLinks.length > 0 && (
           <div className="hero__social">
             {socialLinks.map((social, index) => (
-              <a
+              <Text.A
                 key={index}
                 href={social.href}
                 className="hero__socialLink"
@@ -64,10 +64,10 @@ export default function Hero({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="hero__socialIcon" aria-hidden="true">
+                <Text as="span" className="hero__socialIcon" aria-hidden="true">
                   {social.icon}
-                </span>
-              </a>
+                </Text>
+              </Text.A>
             ))}
           </div>
         )}

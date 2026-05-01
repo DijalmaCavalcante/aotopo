@@ -1,6 +1,7 @@
 import { useMobileMenu } from "./useMobileMenu";
 import Logo from "@components/logo/component";
 import Button from "@components/button/component";
+import Text from "@components/text/component";
 import "./style.css";
 
 const NAV_LINKS = [
@@ -53,28 +54,28 @@ function component() {
         <ul className="headerMobile__menu">
           {NAV_LINKS.map((link, index) => (
             <li key={index} className="headerMobile__menuItem">
-              <a
+              <Text.A
                 href={link.href}
                 className="headerMobile__link"
                 onClick={closeMenu}
               >
                 {link.label}
-              </a>
+              </Text.A>
             </li>
           ))}
         </ul>
       </nav>
       <div className="headerMobile__divider" />
       <div className="headerMobile__social">
-        <a href="https://instagram.com/aotopo" className="headerMobile__socialLink" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <span className="headerMobile__socialIcon">ins</span>
-        </a>
-        <a href="https://youtube.com/aotopo" className="headerMobile__socialLink" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-          <span className="headerMobile__socialIcon">ytu</span>
-        </a>
-        <a href="https://tiktok.com/@aotopo" className="headerMobile__socialLink" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-          <span className="headerMobile__socialIcon">ttk</span>
-        </a>
+        <Text.A href="https://instagram.com/aotopo" className="headerMobile__socialLink" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <Text as="span" className="headerMobile__socialIcon">ins</Text>
+        </Text.A>
+        <Text.A href="https://youtube.com/aotopo" className="headerMobile__socialLink" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <Text as="span" className="headerMobile__socialIcon">ytu</Text>
+        </Text.A>
+        <Text.A href="https://tiktok.com/@aotopo" className="headerMobile__socialLink" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+          <Text as="span" className="headerMobile__socialIcon">ttk</Text>
+        </Text.A>
       </div>
       <div className="headerMobile__cta">
         <Button variant="filled" rounded="pill" href="https://open.spotify.com/">

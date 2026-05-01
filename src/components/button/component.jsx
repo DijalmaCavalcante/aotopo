@@ -1,4 +1,5 @@
 import { useButton } from "./useButton.js";
+import Text from "@components/text/component";
 import "./style.css";
 
 export default function Button({
@@ -26,9 +27,9 @@ export default function Button({
   const content = (
     <>
       {loading && <span className="button__spinner" aria-hidden="true" />}
-      <span className={`button__label${loading ? " button__label--hidden" : ""}`}>
+      <Text as="span" className={`button__label${loading ? " button__label--hidden" : ""}`}>
         {children}
-      </span>
+      </Text>
     </>
   );
 

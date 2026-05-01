@@ -1,6 +1,7 @@
 
-import Header from './components/header/component';
-import Hero from './components/hero/component';
+import Header from '@components/header/component';
+import Hero from '@components/hero/component';
+import Text from '@components/text/component';
 
 function App() {
 
@@ -10,9 +11,8 @@ function App() {
       </Header>
       <Hero
         title={
-          <>AO TOPO<span style={{ color: "var(--color-orange)" }}>!</span></>
+          <>AO TOPO<Text as="span" color="orange">!</Text></>
         }
-        subtitle="De Guarulhos pro mundo"
         buttons={[
           {
             label: "Ouça Fazer Valer",

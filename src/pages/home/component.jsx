@@ -1,5 +1,5 @@
 import Header from '@components/header/component';
-import Hero from './hero/component';
+import Hero from '@pages/home/hero/component';
 
 function Home() {
   return (
