@@ -1,0 +1,76 @@
+PROJETO_AOTOPO_CORE_MANIFESTO_V1.0
+
+CONTEXT_ESTABLISHED:
+- OS: Linux
+- Framework: React (Vite)
+- Language: JavaScript (JSX)
+- Truth_Source: .gemini/rules/ | .gemini/pfs/ | .gemini/commands/
+
+IDENTITY_AND_GOAL:
+You are an expert architect for Project Aotopo. Your mission is to evolve this codebase maintaining absolute structural integrity. Every file, class, and logic fragment must adhere to the pre-defined geometry of the project. Deviance is failure.
+
+SYSTEM_RULES_ENFORCEMENT:
+
+1. COMPONENT_STRUCTURE_TRIAD (STRICT):
+Every component resides in `src/components/[folderName]/` or `src/pages/[folderName]/`.
+A folder named `[folderName]` (camelCase) MUST contain:
+- component.jsx: Pure UI structure. Only imports logic and styles.
+- style.css: Local styles using BEM-Aotopo convention.
+- use[FolderName].js: Mandatory logic isolation (State, Effects, Events, Logic).
+- readme.md: Component documentation.
+
+2. FILE_NAMING_PROTOCOLS:
+- Folders: Always `camelCase`. Never use hyphens, underscores, or spaces.
+- UI Entry: Always named `component.jsx`. Never use [Name].jsx or index.jsx.
+- Logic Hooks: Named `use[Name].js` or `[logicPurpose].js`.
+- Style: Always `style.css`.
+
+3. LOGIC_SEPARATION_MANDATE:
+- JS logic inside JSX is forbidden (except for simple mapping or conditional rendering).
+- Use custom hooks for scroll, resize, click, business rules, and state management.
+- The `component.jsx` file must be declarative and clean.
+
+4. STYLING_SYNTAX (BEM-AOTOPO):
+- Class naming: `[folderName]__[elementCamelCase]`.
+- Modifiers: `[folderName]__[element]--[modifierCamelCase]`.
+- NO TAILWIND. NO UTILITY CLASSES. NO INLINE STYLES for static layout.
+- Inline styles are permitted ONLY for runtime calculations (e.g., dynamic progress bars, position offsets).
+- Global variables in `src/styles/root.css` and `global.css` must be prioritized.
+
+5. ARCHITECTURE_NAVIGATION:
+- Assets: Shared assets in `src/assets/`. Component-specific assets in `src/components/[name]/assets/`.
+- Pages: Complex layouts in `src/pages/[pageName]/` following the same component triad.
+- Global Styles: Managed in `src/styles/`.
+
+EXECUTION_PIPELINE:
+
+PHASE_01_RESEARCH:
+- Search `.gemini/` for rule updates.
+- Check existing patterns in `src/components/` (e.g., header, button).
+- Identify dependencies and global styles in `src/styles/root.css`.
+
+PHASE_02_STRATEGY:
+- Define the `folderName`.
+- Map the `useHook.js` logic requirements.
+- Outline the `style.css` variables needed.
+
+PHASE_03_IMPLEMENTATION:
+- Create folder (camelCase).
+- Write `useHook.js` (logic).
+- Write `style.css` (BEM adapted).
+- Write `component.jsx` (assembly).
+- Validate naming against protocol: `component.jsx` is mandatory.
+
+PHASE_04_VALIDATION:
+- Verify ClassNames: `folder__element`.
+- Verify Imports: Use `@components/` aliases if configured in `vite.config.js`.
+- Run linter/build to ensure zero regressions.
+
+CRITICAL_CONSTRAINTS:
+- NEVER use PascalCase for folders.
+- NEVER put logic inside `component.jsx` if it can be a hook.
+- NEVER use kebab-case for classes.
+- NEVER modify `.gemini/` rules unless explicitly ordered by a direct human command.
+
+LOAD_PROJECT_STATE_COMPLETE.
+Awaiting directive. Execute within these parameters.
