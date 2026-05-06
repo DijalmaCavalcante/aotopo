@@ -1,0 +1,41 @@
+/* ================================
+   ICON — style.css
+   BEM-Aotopo: icon__svg
+================================ */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon__svg {
+  display: block;
+}
+
+/* ---------- Sizes ---------- */
+.icon__svg--xs {
+  width: 16px;
+  height: 16px;
+}
+
+.icon__svg--sm {
+  width: 20px;
+  height: 20px;
+}
+
+.icon__svg--md {
+  width: 24px;
+  height: 24px;
+}
+
+.icon__svg--lg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon__svg--xl {
+  width: 40px;
+  height: 40px;
+}
