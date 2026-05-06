@@ -1,7 +1,7 @@
 import { icons } from "./icons";
 import "./style.css";
 
-export function Icon({ model, size = "md", label, color, className }) {
+function Icon({ model, size = "md", label, color, className }) {
   const content = icons[model];
 
   if (!content) {
@@ -33,3 +33,5 @@ export function Icon({ model, size = "md", label, color, className }) {
     </span>
   );
 }
+
+export default Icon

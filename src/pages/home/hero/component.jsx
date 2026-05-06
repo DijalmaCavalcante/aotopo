@@ -1,43 +1,34 @@
-import { useHero } from "./useHero";
 import "./style.css";
-import { Icon } from "@components/icon/component"
+import Icon from "@components/icon/component"
+import Text from '@components/text/component'
+import BgEffect from './bgEffect'
 
 function Hero() {
-  const { isVisible, socialLinks } = useHero();
-
   return (
     <section className="hero">
-      <div className="hero__bgGradient" />
-      <div className="hero__bgBlobs">
-        <div className="hero__blob hero__blob--orange" />
-        <div className="hero__blob hero__blob--blue" />
-        <div className="hero__blob hero__blob--center" />
-      </div>
-      <div className="hero__bgGrid" />
+      <BgEffect />
       <div className="hero__container">
-        <div className={`hero__inner${isVisible ? " hero__inner--visible" : ""}`}>
+        <div className='hero__inner'>
           <h1 className="hero__title">
-            <span className="hero__titleMain">AO TOPO</span>
-            <span className="hero__titleAccent">!</span>
-            <Icon name="instagramOutlined" />
+            <Text font='display' color='inverted' size='heroTitle'>Ao Topo</Text>
+            <Text color='orange' size='heroTitle' weight='bold'>!</Text>
           </h1>
           <div className="hero__actions">
             <a href="#musica" className="hero__btnPrimary">
-              <Icon name="playFilled" />
-              Ouça Fazer Valer
+              <Icon model="playFilled" />
+              <Text color='inverted' weight='bold'>Ouça - Fazer Valer</Text>
             </a>
             <a href="#sobre" className="hero__btnSecondary">
-              Conheça a Banda
+              <Text color='inverted' weight='bold'>Conheça a banda</Text>
             </a>
           </div>
           <div className="hero__socialLink">
-            <Icon name="instagramOutlined" className="hero__socials" />
+            <Icon model="instagramOutlined" />
           </div>
         </div>
       </div>
-
     </section>
-  );
+  )
 }
 
 export default Hero

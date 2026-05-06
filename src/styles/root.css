@@ -49,21 +49,22 @@
   --color-pure-black: #000;
 
   /* Font Size */
-  --font-size-xs: 0.75rem;   /* 12px - labels pequenos */
-  --font-size-sm: 0.875rem;  /* 14px - texto secundário */
-  --font-size-base: 1rem;    /* 16px - corpo de texto */
-  --font-size-md: 1.125rem;  /* 18px - texto destacado */
-  --font-size-lg: 1.25rem;   /* 20px - subtítulos */
-  --font-size-xl: 1.5rem;    /* 24px - títulos h3 */
-  --font-size-2xl: 2rem;     /* 32px - títulos h2 */
-  --font-size-3xl: 2.5rem;   /* 40px - títulos h1 */
-  --font-size-4xl: 3rem;     /* 48px - hero titles */
-  --font-size-5xl: 3.5rem;   /* 56px - hero titles */
-  --font-size-6xl: 4rem;     /* 64px - hero titles */
-  --font-size-7xl: 4.5rem;   /* 72px - hero titles */
-  --font-size-8xl: 5rem;     /* 80px - hero titles */
-  --font-size-9xl: 5.5rem;   /* 88px - hero titles */
-  --font-size-10xl: 6rem;    /* 96px - hero titles */
+  --font-size-xs: 0.75rem;        /* 12px - labels pequenos */
+  --font-size-sm: 0.875rem;       /* 14px - texto secundário */
+  --font-size-base: 1rem;         /* 16px - corpo de texto */
+  --font-size-md: 1.125rem;       /* 18px - texto destacado */
+  --font-size-lg: 1.25rem;        /* 20px - subtítulos */
+  --font-size-xl: 1.5rem;         /* 24px - títulos h3 */
+  --font-size-2xl: 2rem;          /* 32px - títulos h2 */
+  --font-size-3xl: 2.5rem;        /* 40px - títulos h1 */
+  --font-size-4xl: 3rem;          /* 48px - hero titles */
+  --font-size-5xl: 3.5rem;        /* 56px - hero titles */
+  --font-size-6xl: 4rem;          /* 64px - hero titles */
+  --font-size-7xl: 4.5rem;        /* 72px - hero titles */
+  --font-size-8xl: 5rem;          /* 80px - hero titles */
+  --font-size-9xl: 5.5rem;        /* 88px - hero titles */
+  --font-size-10xl: 6rem;         /* 96px - hero titles */
+  --font-size-heroTitle: 11rem;  /* 180px - hero titles */
 
   /* Font Family */
   --font-family-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;

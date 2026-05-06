@@ -20,6 +20,7 @@
 .text__content--size-8xl  { font-size: var(--font-size-8xl); }
 .text__content--size-9xl  { font-size: var(--font-size-9xl); }
 .text__content--size-10xl { font-size: var(--font-size-10xl); }
+.text__content--size-heroTitle { font-size: var(--font-size-heroTitle); }
 
 /* ─── Weight ─────────────────────────────────────────────── */
 .text__content--weight-regular  { font-weight: var(--font-weight-regular); }
@@ -45,6 +46,10 @@
 .text__content--lh-tight   { line-height: var(--line-height-tight); }
 .text__content--lh-normal  { line-height: var(--line-height-normal); }
 .text__content--lh-relaxed { line-height: var(--line-height-relaxed); }
+
+/* ─── Font Family ────────────────────────────────────────── */
+.text__content--font-principal { font-family: var(--font-family-principal) }
+.text__content--font-display { font-family: var(--font-family-display) }
 
 /* ─── Utilitários ────────────────────────────────────────── */
 .text__content--truncate {

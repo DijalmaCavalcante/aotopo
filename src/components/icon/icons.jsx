@@ -1,14 +1,4 @@
-/**
- * AOTOPO — Icon Library
- * Todos os paths são SVG puros (viewBox 24x24 padrão)
- * Uso: icons["nomeDoCone"]
- */
-
 export const icons = {
-
-  /* ═══════════════════════════════
-     SOCIAL MEDIA
-  ═══════════════════════════════ */
 
   instagramOutlined: (
     <path

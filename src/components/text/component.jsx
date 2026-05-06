@@ -2,7 +2,8 @@ import { useText } from "./useText.js";
 import "./style.css";
 
 function Text({
-  as = "p",
+  as = "span",
+  font = "principal",
   size = "base",
   weight = "regular",
   color = "default",
@@ -23,6 +24,7 @@ function Text({
     lineHeight,
     truncate,
     uppercase,
+    font
   });
 
   return (
@@ -48,7 +50,6 @@ function createTextComponent(defaultTag, defaultProps = {}) {
 /* Variantes */
 Text.A = createTextComponent("a");
 Text.P = createTextComponent("p");
-Text.Span = createTextComponent("span");
 
 Text.H1 = createTextComponent("h1", {
   size: "4xl",
