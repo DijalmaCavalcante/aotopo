@@ -55,12 +55,9 @@
   gap: var(--spacing-2);
   padding: var(--spacing-4) var(--spacing-8);
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: 0.2s;
 
-  &&:hover {
-    background-color: var(--color-orange-dark);
-    text-decoration: none;
-  }
+  &&:hover {background-color: var(--color-orange-darker)}
 }
 
 .hero__btnSecondary {
@@ -170,7 +167,7 @@
   width: 24rem;
   height: 24rem;
   background-color: rgba(234, 96, 13, 0.12);
-  animation: heroBlobPulse 4s ease-in-out infinite;
+  animation: heroBlobPulse 2s ease-in-out infinite;
 }
 
 .hero__blob--blue {
@@ -179,7 +176,7 @@
   width: 24rem;
   height: 24rem;
   background-color: rgba(20, 116, 167, 0.10);
-  animation: heroBlobPulse 4s ease-in-out infinite 1s;
+  animation: heroBlobPulse 2s ease-in-out infinite 1s;
 }
 
 .hero__blob--center {

@@ -28,27 +28,32 @@
   align-items: center;
 }
 
-.header__link:hover {
-  color: #ffffff;
-}
-
-.header__ctaButton {
-  flex-shrink: 0;
-  font-family: var(--font-family-principal);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-pure-white);
-  background-color: var(--color-orange);
-  border: none;
-  border-radius: var(--radius-3);
-  padding: var(--spacing-2) var(--spacing-6);
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
-}
-
 .header__medias {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-6);
+}
+
+.header__mediaLink {
+  color: var(--color-master-light);
+  transition: 0.2s;
+
+  &&:hover {color: var(--color-pure-white);}
+}
+
+.header__ctaButton {
+  background-color: var(--color-orange);
+  border-radius: var(--radius-3);
+  border: none;
+  color: var(--color-pure-white);
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: var(--font-family-principal);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-2) var(--spacing-6);
+  transition: 0.2s;
+
+  &&:hover {background-color: var(--color-orange-darker);}
 }

@@ -9,7 +9,7 @@ const weights = ["regular","medium","semibold","bold"];
 const colors = ["default","subtle","muted","inverted","orange","blue","ocean"];
 const aligns = ["left","center","right"];
 const lineHeights = ["tight","normal","relaxed"];
-const font = ['principal', 'display']
+const fonts = ['principal', 'display'];
 
 export function useText({
   as = "p",
@@ -21,27 +21,8 @@ export function useText({
   font = "principal",
   truncate = false,
   uppercase = false,
+  hoverEffect
 }) {
-  /* Validação defensiva */
-  if (!sizes.includes(size)) {
-    throw new Error(`Invalid size: ${size}`);
-  }
-
-  if (!weights.includes(weight)) {
-    throw new Error(`Invalid weight: ${weight}`);
-  }
-
-  if (!colors.includes(color)) {
-    throw new Error(`Invalid color: ${color}`);
-  }
-
-  if (!aligns.includes(align)) {
-    throw new Error(`Invalid align: ${align}`);
-  }
-
-  if (!lineHeights.includes(lineHeight)) {
-    throw new Error(`Invalid lineHeight: ${lineHeight}`);
-  }
 
   const classNames = [
     "text__content",
@@ -51,6 +32,7 @@ export function useText({
     `text__content--align-${align}`,
     `text__content--lh-${lineHeight}`,
     `text__content--font-${font}`,
+    hoverEffect ? `text__content--hoverEffect` : false,
     truncate && "text__content--truncate",
     uppercase && "text__content--uppercase",
   ]

@@ -11,6 +11,7 @@ function Text({
   lineHeight = "normal",
   truncate = false,
   uppercase = false,
+  hoverEffect,
   children,
   className = "",
   ...rest
@@ -24,7 +25,8 @@ function Text({
     lineHeight,
     truncate,
     uppercase,
-    font
+    font,
+    hoverEffect
   });
 
   return (
