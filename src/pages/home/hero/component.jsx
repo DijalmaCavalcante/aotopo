@@ -1,9 +1,10 @@
 import "./style.css";
-import Icon from "@components/icon/component"
-import Text from '@components/text/component'
 import BgEffect from './bgEffect'
+import Icon from "@components/icon/component"
+import link from '@helpers/links'
+import Text from '@components/text/component'
 
-function Hero() {
+function Hero () {
   return (
     <section className="hero">
       <BgEffect />
@@ -22,8 +23,16 @@ function Hero() {
               <Text color='inverted' weight='bold'>Conheça a banda</Text>
             </a>
           </div>
-          <div className="hero__socialLink">
-            <Icon model="instagramOutlined" />
+          <div className="hero__socialMidias">
+            <a className="hero__socialLink" href={link.instagram} target="__blank">
+              <Icon model="instagramOutlined" />
+            </a>
+            <a className="hero__socialLink" href={link.tiktok} target="__blank">
+              <Icon model="tiktokFilled" />
+            </a>
+            <a className="hero__socialLink" href={link.youtube} target="__blank">
+              <Icon model="youtubeFilled" />
+            </a>
           </div>
         </div>
       </div>

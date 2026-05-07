@@ -1,5 +1,5 @@
 [PROJECT_OVERVIEW]
-Project Aotopo is a React-based web application (Vite) focused on high-quality visual experience and strict architectural separation.
+Project Aotopo is a React-based web application (Vite) focused on high-quality visual experience and strict architectural separation for the band Ao Topo.
 
 [ARCHITECTURE]
 - Source of truth: .gemini/ directory containing rules, patterns (pfs), and commands.
@@ -8,18 +8,21 @@ Project Aotopo is a React-based web application (Vite) focused on high-quality v
   - style.css (BEM-Aotopo styles)
   - use[Name].js (Logic isolation hook)
 - Logic separation: JS logic (state, effects, events) must reside in external hooks, keeping JSX declarative.
+- Helpers: src/helpers/ directory for shared data and utility functions (e.g., social links).
 
 [PATTERNS]
 - Component entry: Always named component.jsx.
 - Logic hooks: Named use[Name].js.
 - Styles: BEM-Aotopo convention: [folderName]__[elementCamelCase]--[modifier].
-- Icons: Centralized SVG library in src/components/icon/.
+- Icons: Centralized SVG library in src/components/icon/. Documentation in iconList.md.
 - Typography: Managed via Text component with size, weight, color, and font props.
+- Path Aliases: @components, @pages, @helpers.
 
 [BUSINESS_RULES]
 - CSS-only styling: No Tailwind or utility classes.
 - Design variables: Standardized in src/styles/root.css (spacing, colors, typography, radius).
 - Responsive Header: Split into desktop and mobile sub-components.
+- Social Presence: Centralized links in @helpers/links.js for use in Hero and Footer.
 
 [CONSTRAINTS]
 - NO JS logic inside JSX files (enforced by logicSeparation rule).
