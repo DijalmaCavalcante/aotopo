@@ -1,8 +1,10 @@
-import { useMobileMenu } from "./useMobileMenu";
-import Logo from "@components/logo/component";
-import Button from "@components/button/component";
-import Text from "@components/text/component";
 import "./style.css";
+import { useMobileMenu } from "./useMobileMenu";
+import Button from "@components/button/component";
+import Icon from '@components/icon/component'
+import link from '@helpers/links'
+import Logo from "@components/logo/component";
+import Text from "@components/text/component";
 
 const NAV_LINKS = [
   { label: "Sobre",     href: "/sobre" },
@@ -67,15 +69,15 @@ function component() {
       </nav>
       <div className="headerMobile__divider" />
       <div className="headerMobile__social">
-        <Text.A href="https://instagram.com/aotopo" className="headerMobile__socialLink" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <Text as="span" className="headerMobile__socialIcon">ins</Text>
-        </Text.A>
-        <Text.A href="https://youtube.com/aotopo" className="headerMobile__socialLink" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-          <Text as="span" className="headerMobile__socialIcon">ytu</Text>
-        </Text.A>
-        <Text.A href="https://tiktok.com/@aotopo" className="headerMobile__socialLink" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-          <Text as="span" className="headerMobile__socialIcon">ttk</Text>
-        </Text.A>
+        <a className="header__mediaLink" href={link.instagram} target="__blank">
+          <Icon model="instagramOutlined" />
+        </a>
+        <a className="header__mediaLink" href={link.tiktok} target="__blank">
+          <Icon model="tiktokFilled" />
+        </a>
+        <a className="header__mediaLink" href={link.youtube} target="__blank">
+          <Icon model="youtubeFilled" />
+        </a>
       </div>
       <div className="headerMobile__cta">
         <Button variant="filled" rounded="pill" href="https://open.spotify.com/">

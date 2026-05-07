@@ -1,8 +1,8 @@
-import Logo from '@components/logo/component'
 import "./style.css"
-import Text from '@components/text/component'
 import Icon from "@components/icon/component"
 import link from "@helpers/links"
+import Logo from '@components/logo/component'
+import Text from '@components/text/component'
 
 function component () {
   return (
