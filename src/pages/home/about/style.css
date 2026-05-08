@@ -1,22 +1,15 @@
-/* ================================
-   ABOUT — style.css
-   BEM-Aotopo: about__[element]
-================================ */
-
-/* ---------- Section ---------- */
 .about {
-  position: relative;
-  padding: var(--spacing-24) 0;
   overflow: hidden;
+  padding: var(--spacing-24) 0;
+  position: relative;
 }
 
-/* ---------- Decorative top line ---------- */
-.about__topLine {
+.about__sectionSeparation {
+  height: 1px;
+  left: 0; 
   position: absolute;
   top: 0;
-  left: 0; 
   width: 100%;
-  height: 1px;
   background: linear-gradient(
     to right,
     transparent,
@@ -25,44 +18,33 @@
   );
 }
 
-/* ---------- Background blob ---------- */
 .about__bgBlob {
-  position: absolute;
-  left: -16rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24rem;
-  height: 24rem;
   background-color: rgba(20, 116, 167, 0.05);
   border-radius: var(--radius-6);
   filter: blur(80px);
+  height: 24rem;
+  left: -16rem;
   pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24rem;
 }
 
-/* ---------- Container ---------- */
 .about__container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 var(--spacing-4);
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
-/* ---------- Grid ---------- */
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-20);
   align-items: center;
-  transform: translateY(2.5rem);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-/* ---------- Visual Side ---------- */
-.about__visual {
-  position: relative;
-  order: 1;
 }
 
 .about__visualFrame {
@@ -91,6 +73,12 @@
   );
   border-radius: var(--radius-3);
   overflow: hidden;
+}
+
+.about__bandImg {
+  border-radius: var(--radius-3);
+  max-width: 32rem;
+  margin: 0 auto;
 }
 
 .about__visualWatermark {
@@ -143,7 +131,6 @@
 
 /* ---------- Content Side ---------- */
 .about__content {
-  order: 2;
 }
 
 .about__label {

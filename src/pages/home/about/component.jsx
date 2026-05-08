@@ -1,24 +1,25 @@
 import "./style.css";
 import Text from "@components/text/component";
+import allBand from '@assets/allBand.webp'
 
 function About() {
 
   return (
     <section id="sobre" className="about">
-      <div className="about__topLine" />
+      <div className="about__sectionSeparation" />
       <div className="about__bgBlob" />
       <div className="about__container">
         <div className='about__grid'>
-          <div className="about__visual">
+          <div>
             <div className="about__visualFrame">
               <div className="about__visualBorder" />
               <div className="about__visualCard">
-                <Text font="display" weight="bold" className="about__visualWatermark">AT!</Text>
+                <img src={allBand} className='about__bandImg'/>
                 <div className="about__visualOverlay" />
               </div>
               <div className="about__blobOrange" />
-              <div className="about__blobBlue" />
-            </div>
+            <div className="about__blobBlue" />
+          </div>
           </div>
           <div className="about__content">
             <Text size="xs" weight="semibold" color="orange" uppercase className="about__label">Sobre a Banda</Text>
