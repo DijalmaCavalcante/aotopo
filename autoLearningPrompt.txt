@@ -9,13 +9,14 @@ src/
     header/
       desktop/
       mobile/
-    hero/
     icon/
     logo/
     text/
   helpers/
   pages/
     home/
+      about/
+      hero/
   styles/
 
 [PATH_ALIASES]

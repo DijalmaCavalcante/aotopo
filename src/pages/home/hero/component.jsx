@@ -10,10 +10,19 @@ function Hero () {
       <BgEffect />
       <div className="hero__container">
         <div className='hero__inner'>
-          <h1 className="hero__title">
-            <Text font='display' color='inverted' size='heroTitle'>Ao Topo</Text>
-            <Text color='orange' size='heroTitle' weight='bold'>!</Text>
-          </h1>
+
+          <div className="hero__textContainer">
+            <div className="hero__title">
+              <Text font='display' color='inverted' size='heroTitle'>
+                Ao Topo
+                <Text color='orange' size='heroTitle' weight='bold'>!</Text>
+              </Text>
+            </div>
+            <Text color='muted' size='2xl' font='display'>Anota a placa!</Text>  
+          </div>
+          
+
+
           <div className="hero__actions">
             <a href="#musica" className="hero__btnPrimary">
               <Icon model="playFilled" />
