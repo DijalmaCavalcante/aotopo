@@ -110,6 +110,14 @@
   }
 }
 
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 371px) {
+  .hero__title {
+    span {font-size: var(--font-size-7xl);}
+  }
+}
+
 @media (max-width: 652px) {
   .hero__title {
     span {font-size: var(--font-size-10xl);}
@@ -118,7 +126,7 @@
   .hero__actions {
     display: flex;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 

@@ -13,7 +13,7 @@ function Hero () {
 
           <div className="hero__textContainer">
             <div className="hero__title">
-              <Text font='display' color='inverted' size='heroTitle'>
+              <Text font='display' color='inverted' size='heroTitle' weight='bold'>
                 Ao Topo
                 <Text color='orange' size='heroTitle' weight='bold'>!</Text>
               </Text>

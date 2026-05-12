@@ -49,12 +49,15 @@ import "./style.css"
 - Text Component: Centralized typography management via props (size, weight, color, font, hoverEffect).
 
 [ROOT_VARIABLES]
-- Spacing: --spacing-0 to --spacing-32 (4px increments).
-- Colors: orange, blue, ocean, master (darker to lightest scales).
-- Typography: --font-size-xs to --font-size-heroTitle (11rem).
+- Spacing: --spacing-0 (0) to --spacing-32 (128px).
+- Colors: orange (darker to lightest), blue (darker to lightest), ocean (darker to lightest), master (darker to lightest), pure-white (#fff), pure-black (#000).
+- Font Size: --font-size-xs (0.75rem) to --font-size-heroTitle (11rem). Includes 10xl (6rem).
 - Fonts: principal (Segoe UI), display (Impact).
-- Radius: --radius-1 to --radius-pill (9999px).
-- Z-Index: --z-base to --z-tooltip.
+- Weights: regular (400), medium (500), semibold (600), bold (700).
+- Line Heights: tight (1.25), normal (1.5), relaxed (1.75).
+- Radius: none, 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (24px), 6 (50%), pill (9999px).
+- Shadows: sm, md, lg, xl.
+- Z-Index: base (0) to tooltip (1600).
 
 [PATTERNS]
 - Interactive elements use transition: 0.2s for smoothness.
