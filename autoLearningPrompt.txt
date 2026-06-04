@@ -1,5 +1,5 @@
 [PROJECT_OVERVIEW]
-Aotopo is a high-visual-impact React application for the band Ao Topo, built with Vite and focused on strict architectural separation and aesthetic polish.
+Aotopo is a React-based web application for an independent band from Guarulhos/SP. The project follows a component-based architecture with clear logic separation and styling conventions.
 
 [FOLDER_TREE]
 src/
@@ -7,8 +7,6 @@ src/
   components/
     button/
     header/
-      desktop/
-      mobile/
     icon/
     logo/
     text/
@@ -17,6 +15,7 @@ src/
     home/
       about/
       hero/
+    shop/
   styles/
 
 [PATH_ALIASES]
@@ -26,53 +25,50 @@ src/
 @assets -> src/assets
 
 [IMPORT_PATTERNS]
-import Component from "@components/name/component"
-import Icon from "@components/icon/component"
-import link from "@helpers/links"
-import "./style.css"
+import Component from "@components/button/component"
+import Header from "@components/header/component"
+import links from "@helpers/links"
+import useHero from "./useHero"
 
 [ARCHITECTURE]
-- Source of truth: .gemini/ directory for rules and commands.
-- Component Isolation: Each component is a folder containing component.jsx (UI) and style.css (BEM).
-- Logic Separation: State and logic must be in use[Name].js hooks, imported into component.jsx.
-- Header System: Split into desktop and mobile versions for responsive control.
+The project uses a component-based architecture where each component is contained in its own folder. Logic is often separated into custom hooks (e.g., useButton.js, useAbout.js). Pages are composed of these components.
 
 [COMPONENT_STRUCTURE]
-- component.jsx: Declarative JSX only.
-- style.css: Localized BEM styles.
-- use[Name].js: Business logic, state, and event handlers.
-- readme.md: Component documentation.
+Each component folder typically contains:
+- component.jsx: The React component
+- style.css: Scoped styles
+- use[ComponentName].js: Logic hook (optional)
+- readme.md: Documentation (optional)
 
 [STYLING_SYSTEM]
-- Pure CSS: No Tailwind or utility frameworks allowed.
-- BEM-Aotopo: [folderName]__[elementCamelCase]--[modifier].
-- Text Component: Centralized typography management via props (size, weight, color, font, hoverEffect).
+Vanilla CSS with CSS variables defined in root.css. Global styles in global.css. BEM-like class naming conventions are used (e.g., component__element--modifier).
 
 [ROOT_VARIABLES]
-- Spacing: --spacing-0 (0) to --spacing-32 (128px).
-- Colors: orange (darker to lightest), blue (darker to lightest), ocean (darker to lightest), master (darker to lightest), pure-white (#fff), pure-black (#000).
-- Font Size: --font-size-xs (0.75rem) to --font-size-heroTitle (11rem). Includes 10xl (6rem).
-- Fonts: principal (Segoe UI), display (Impact).
-- Weights: regular (400), medium (500), semibold (600), bold (700).
-- Line Heights: tight (1.25), normal (1.5), relaxed (1.75).
-- Radius: none, 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (24px), 6 (50%), pill (9999px).
-- Shadows: sm, md, lg, xl.
-- Z-Index: base (0) to tooltip (1600).
+Colors: orange-darker, orange-dark, orange, orange-light, orange-lighter, orange-lightest, blue-darker, blue-dark, blue, blue-light, blue-lighter, blue-lightest, ocean-darker, ocean-dark, ocean, ocean-light, ocean-lighter, ocean-lightest, master-darker, master-dark, master, master-light, master-lighter, master-lightest, pure-white, pure-black.
+Spacing: 0 to 32 (4px increments).
+Font Sizes: xs to 10xl, heroTitle.
+Font Families: principal (Segoe UI), display (Impact).
+Font Weights: regular (400), medium (500), semibold (600), bold (700).
+Line Heights: tight (1.25), normal (1.5), relaxed (1.75).
+Radius: none to 6, pill.
+Shadows: sm, md, lg, xl.
+Z-Index: base to tooltip.
 
 [PATTERNS]
-- Interactive elements use transition: 0.2s for smoothness.
-- Icons are centralized in @components/icon/ and documented in iconList.md.
-- Social links are centralized in @helpers/links.js.
+- Logic separation using custom hooks.
+- BEM for CSS classes.
+- Path aliases for clean imports.
+- Semantic HTML tags.
 
 [BUSINESS_RULES]
-- JSX files must remain declarative; NO complex logic inside component.jsx.
-- All styles must use design tokens (CSS variables) from root.css.
+- Band founded in 2021 (Guarulhos).
+- Content focuses on authenticity, survival, love, and connection.
+- Musical style is a mix of rock alternativo, rap, MPB, reggae, funky soul.
 
 [CONSTRAINTS]
-- NO inline styles.
-- NO utility-first CSS.
-- Files must follow camelCase; Components use PascalCase in imports.
+- Prefer Vanilla CSS over frameworks.
+- Strictly follow component folder structure.
+- Maintain autoLearningPrompt.txt updated after every meaningful change.
 
 [DEPENDENCIES]
-- React (Vite)
-- Standard CSS Custom Properties
+react, react-dom, vite, @vitejs/plugin-react, eslint.
