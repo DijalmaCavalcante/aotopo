@@ -17,6 +17,7 @@ src/
     home/ (Main landing page)
       about/ (Band history section)
       hero/ (Main visual entry)
+      music/ (Featured single/music player)
     shop/ (Future store area)
   styles/ (Global CSS and Tokens)
     root.css (Design Tokens / CSS Variables)
@@ -83,9 +84,10 @@ Defined in src/styles/root.css. Always use var() for:
 - Radius: --radius-1 (4px) to --radius-pill.
 - Z-Index: --z-base to --z-tooltip (1600).
 
-[BUSINESS RULES & BRAND VOICE]
+[BUSINESS_RULES]
 - Band: Aotopo (from Guarulhos/SP).
 - Foundation: 2021 (Calculate dynamic years using current date - 2021).
+- Featured Single: "Fazer Valer" (2024).
 - Genres: Rock Alternativo, Rap, Hip Hop, MPB, Reggae (Hybrid sound).
 - Voice: Authentic, human, focused on survival, emotional connection, and "Anota a Placa" slogan.
 
