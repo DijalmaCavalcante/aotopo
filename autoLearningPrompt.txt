@@ -1,74 +1,105 @@
 [PROJECT_OVERVIEW]
-Aotopo is a React-based web application for an independent band from Guarulhos/SP. The project follows a component-based architecture with strict logic separation and BEM-like styling conventions.
+Aotopo is a high-performance React web application built with Vite for an independent band from Guarulhos/SP. It serves as a digital identity, featuring a home page with "Hero" and "About" sections, social media integration, and a future shop. The project follows a strict architectural boundary between structure (JSX) and behavior (Hooks), uses a semantic Design System through Vanilla CSS, and maintains a highly organized component folder structure.
 
 [FOLDER_TREE]
 src/
-  assets/
-  components/
-    button/
-    header/
-    icon/
-    logo/
-    text/
-  helpers/
-  pages/
-    home/
-      about/
-      hero/
-    shop/
-  styles/
+  assets/ (Global images/icons like allBand.webp, logo-textura.png)
+  components/ (Reusable UI Atoms/Molecules)
+    button/ (Universal Action Component)
+    header/ (Responsive Multi-layer Header)
+      desktop/ (Desktop-specific layout)
+      mobile/ (Drawer-based mobile layout)
+    icon/ (SVG Icon Library)
+    logo/ (Brand Logo Variants)
+    text/ (Design System Typography Engine)
+  helpers/ (Utilities like links.js)
+  pages/ (Route-level Views)
+    home/ (Main landing page)
+      about/ (Band history section)
+      hero/ (Main visual entry)
+    shop/ (Future store area)
+  styles/ (Global CSS and Tokens)
+    root.css (Design Tokens / CSS Variables)
+    global.css (Global resets and base styles)
+  App.jsx (Main Orchestrator)
+  main.jsx (Entry Point)
 
 [PATH_ALIASES]
-@components -> src/components
-@pages -> src/pages
-@helpers -> src/helpers
-@assets -> src/assets
+- @components -> src/components (Primary for reusable UI)
+- @pages      -> src/pages      (Primary for page sections)
+- @helpers    -> src/helpers    (Primary for shared logic/data)
+- @assets     -> src/assets     (Primary for static media)
 
 [IMPORT_PATTERNS]
-import Component from "@components/button/component"
-import Header from "@components/header/component"
-import links from "@helpers/links"
-import useHero from "./useHero"
+Always use absolute aliases for better refactoring:
+- import Text from "@components/text/component"
+- import Icon from "@components/icon/component"
+- import links from "@helpers/links"
+- import About from "@pages/home/about/component"
 
-[ARCHITECTURE]
-Component-based architecture. Logic (state, effects, events, calculations) MUST be isolated in custom hooks (use[ComponentName].js) within the component folder. JSX files remain declarative.
+Local imports (hooks/styles) stay relative:
+- import "./style.css"
+- import { useAbout } from "./useAbout"
 
-[COMPONENT_STRUCTURE]
-/component-folder
-  component.jsx
-  style.css
-  use[ComponentName].js
-  readme.md
+[ARCHITECTURE & LOGICAL SEPARATION]
+MANDATORY RULE: Never mix behavior and markup in the same file.
+1. component.jsx: Strictly for JSX, Props, and simple rendering logic.
+2. useComponentName.js: A custom hook containing ALL state, useEffects, event listeners (scroll, resize), business logic, and complex calculations.
+3. style.css: Scoped styles following BEM conventions.
 
-[STYLING_SYSTEM]
-Vanilla CSS with CSS variables. BEM-like naming (component__element--modifier). No utility-first frameworks.
+[COMPONENT TUTORIAL: THE TYPOGRAPHY ENGINE (Text)]
+The @components/text/component is the most critical atom. It provides:
+- Props: size (xs to 10xl, heroTitle), weight (regular to bold), color (default, subtle, muted, inverted, orange, blue, ocean), font (principal, display), align, lineHeight, truncate, uppercase, hoverEffect.
+- Variants: Text.H1, Text.H2, Text.H3, Text.P, Text.A (automatically set semantic tags and default styles).
+Usage: <Text.H2 color="orange" weight="bold">QUEM SOMOS</Text.H2>
 
-[ROOT_VARIABLES]
-Spacing: 0 (0), 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (20px), 6 (24px), 8 (32px), 10 (40px), 12 (48px), 16 (64px), 20 (80px), 24 (96px), 32 (128px)
-Colors: orange (darker to lightest), blue (darker to lightest), ocean (darker to lightest), master (darker to lightest), pure-white, pure-black
-Font Size: xs (0.75rem), sm (0.875rem), base (1rem), md (1.125rem), lg (1.25rem), xl (1.5rem), 2xl (2rem), 3xl (2.5rem), 4xl (3rem), 5xl (3.5rem), 6xl (4rem), 7xl (4.5rem), 8xl (5rem), 9xl (5.5rem), 10xl (6rem), heroTitle (11rem)
-Font Family: principal ('Segoe UI'), display (Impact)
-Font Weight: regular (400), medium (500), semibold (600), bold (700)
-Line Height: tight (1.25), normal (1.5), relaxed (1.75)
-Radius: none, 1-5 (4px to 24px), 6 (50%), pill (9999px)
-Shadows: sm, md, lg, xl
-Z-Index: base (0), dropdown (1000), sticky (1100), fixed (1200), modal-backdrop (1300), modal (1400), popover (1500), tooltip (1600)
+[COMPONENT TUTORIAL: THE ICON SYSTEM (Icon)]
+- File: @components/icon/icons.jsx contains the raw SVG paths.
+- File: @components/icon/iconList.md lists all available models.
+- Usage: <Icon model="instagramOutlined" size="md" color="var(--color-orange)" />
 
-[PATTERNS]
-- Logic separation via hooks
-- BEM for CSS
-- Semantic HTML
-- Path aliases for imports
+[COMPONENT TUTORIAL: BRANDING (Logo)]
+- Hook-driven variant selection via @components/logo/logomap.js.
+- Variants: brancoSf, pretoSf, brancoTexturaSf.
+- Usage: <Logo variant="brancoSf" size="xs" />
 
-[BUSINESS_RULES]
-- Band "Aotopo" from Guarulhos/SP, founded 2021
-- Musical style: Mix of Rock Alternativo, Rap, Hip Hop, MPB, Reggae
-- Focus: Authenticity, survival, challenges, and human connection
+[COMPONENT TUTORIAL: ACTIONS (Button)]
+- Polymorphic: Automatically becomes <a> if href is present, otherwise <button>.
+- Features: loading, disabled, variants (filled, etc).
+- Usage: <Button variant="filled" href={links.youtube}>VER VÍDEOS</Button>
+
+[UTILITY: LINKS HELPER]
+The @helpers/links.js file is the SINGLE SOURCE OF TRUTH for external URLs:
+- links.youtube
+- links.instagram
+- links.tiktok
+Always import this instead of hardcoding URLs in components.
+
+[STYLING SYSTEM & DESIGN TOKENS]
+Defined in src/styles/root.css. Always use var() for:
+- Spacing: --spacing-1 (4px) to --spacing-32 (128px).
+- Colors: --color-orange, --color-blue, --color-ocean, --color-master (with darker/light scales).
+- Fonts: --font-family-principal (Segoe UI), --font-family-display (Impact).
+- Radius: --radius-1 (4px) to --radius-pill.
+- Z-Index: --z-base to --z-tooltip (1600).
+
+[BUSINESS RULES & BRAND VOICE]
+- Band: Aotopo (from Guarulhos/SP).
+- Foundation: 2021 (Calculate dynamic years using current date - 2021).
+- Genres: Rock Alternativo, Rap, Hip Hop, MPB, Reggae (Hybrid sound).
+- Voice: Authentic, human, focused on survival, emotional connection, and "Anota a Placa" slogan.
 
 [CONSTRAINTS]
-- NO logic in JSX (except extremely simple/declarative)
-- Maintain autoLearningPrompt.txt updated
-- Use Vanilla CSS variables
+- NO Tailwind or UI Libraries. Vanilla CSS only.
+- BEM Naming: .block__element--modifier (e.g., .header__menuItem--active).
+- Semantic HTML: Use <section>, <nav>, <article>, <header> correctly.
+- Responsiveness: Order styles by Mobile-First or explicit @media (max-width) blocks at the bottom of .css files.
+- Interactivity: All UI feedback (hover, focus) must be smooth and use project colors.
 
-[DEPENDENCIES]
-react, react-dom, vite, @vitejs/plugin-react, eslint
+[AI OPERATIONAL GUIDE]
+When building or modifying:
+1. Identify the architectural boundary.
+2. If adding behavior, create/update the Hook.
+3. If adding markup, use the Design System components (Text, Button, Icon).
+4. Verify root.css for existing tokens before creating new ones.
+5. Update this file after any structural change.
