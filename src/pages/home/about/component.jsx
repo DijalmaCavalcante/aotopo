@@ -1,10 +1,10 @@
 import "./style.css";
 import Text from "@components/text/component";
 import allBand from '@assets/allBand.webp'
+import { useAbout } from "./useAbout";
 
 function About() {
-  const inicioDaBanda = 2021;
-  const anosDeCaminhada = new Date().getFullYear() - inicioDaBanda;
+  const { anosDeCaminhada } = useAbout();
   
   return (
     <section id="sobre" className="about">
@@ -24,23 +24,25 @@ function About() {
           </div>
           </div>
           <div className="about__content">
-            <Text size="xs" weight="semibold" color="orange" uppercase className="about__label">Sobre a Banda</Text>
-            <Text.H2 font="display" size="6xl" color="inverted" className="about__title">QUEM SOMOS</Text.H2>
+            <Text className="about__label" size="xs" weight="semibold" color="orange">SOBRE A BANDA</Text>
+            <Text.H2 className="about__title" font="display" size="6xl" color="inverted">QUEM SOMOS</Text.H2>
             <div className="about__paragraphs">
-              <Text.P size="md" color="subtle" lineHeight="relaxed" className="about__paragraph">
-                Somos uma banda 
+              <Text.P className="about__paragraph" size="md" color="muted">
+                Somos uma banda
+                {' '}
                 <Text color='blue' weight='semibold'>autoral</Text>
-                 de 
-                 <Text color='orange' weight='semibold'>Guarulhos</Text>
-                 , formada por quatro pessoas que há mais de
+                {' '}
+                de 
+                {' '}
+                <Text color='orange' weight='semibold'>Guarulhos</Text>
+                , com mais de
                 {' '}
                 <Text color='blue' weight='semibold'>{anosDeCaminhada} anos</Text>
                 {' '} 
-                compartilham a mesma caminhada, o mesmo sonho e a mesma vontade de transformar sentimentos em música. Nosso objetivo sempre foi simples: ser feliz fazendo o que amamos e dar voz a tudo aquilo que carregamos por dentro.
-                Nossas composições falam sobre a sobrevivência na vida, os desafios, o amor em suas diferentes formas e a vontade de seguir em frente, mesmo quando o caminho parece difícil. Cada música nasce de experiências reais, reflexões sinceras e histórias que acreditamos merecer ser contadas.
-                Assim como o Brasil, nosso som é feito de mistura. Entre o rock alternativo, o rap, a MPB, o reggae, o funky soul e tudo aquilo que faça sentido no momento. Não acreditamos em rótulos rígidos. Acreditamos na música como linguagem, sentimento e conexão.
-                Acima de qualquer estilo, buscamos preservar nossa essência: criar algo verdadeiro, autoral e humano. Música feita por quem vive, sente, erra, aprende e continua seguindo em frente.
-                Porque, no fim, cada canção é um pedaço da nossa história.
+                de caminhada, unidos por um sonho: ser feliz fazendo o que amamos e transformar em música tudo o que carregamos dentro de nós.
+                Nossas composições falam sobre a sobrevivência, a luta, o amor, os desafios do dia a dia e a vontade de seguir em frente. Cada música nasce de experiências, sentimentos e histórias que acreditamos valer a pena compartilhar.
+                Assim como nosso Brasil, nosso som é pura mistura. Passeamos pelo rock alternativo, rap, hip hop, MPB, reggae e outras influências que ajudam a construir nossa identidade. Mais do que seguir estilos, buscamos manter a essência e a musicalidade em tudo o que fazemos.
+                Acima de tudo, fazemos música de forma verdadeira, autoral e com propósito, sempre mostrando ao mundo o que temos a oferecer.
                 <br />
                 <Text color='orange' weight='bold'>ANOTA A PLACA.</Text>
               </Text.P>

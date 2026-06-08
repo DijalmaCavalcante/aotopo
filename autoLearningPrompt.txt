@@ -1,5 +1,5 @@
 [PROJECT_OVERVIEW]
-Aotopo is a React-based web application for an independent band from Guarulhos/SP. The project follows a component-based architecture with clear logic separation and styling conventions.
+Aotopo is a React-based web application for an independent band from Guarulhos/SP. The project follows a component-based architecture with strict logic separation and BEM-like styling conventions.
 
 [FOLDER_TREE]
 src/
@@ -31,44 +31,44 @@ import links from "@helpers/links"
 import useHero from "./useHero"
 
 [ARCHITECTURE]
-The project uses a component-based architecture where each component is contained in its own folder. Logic is often separated into custom hooks (e.g., useButton.js, useAbout.js). Pages are composed of these components.
+Component-based architecture. Logic (state, effects, events, calculations) MUST be isolated in custom hooks (use[ComponentName].js) within the component folder. JSX files remain declarative.
 
 [COMPONENT_STRUCTURE]
-Each component folder typically contains:
-- component.jsx: The React component
-- style.css: Scoped styles
-- use[ComponentName].js: Logic hook (optional)
-- readme.md: Documentation (optional)
+/component-folder
+  component.jsx
+  style.css
+  use[ComponentName].js
+  readme.md
 
 [STYLING_SYSTEM]
-Vanilla CSS with CSS variables defined in root.css. Global styles in global.css. BEM-like class naming conventions are used (e.g., component__element--modifier).
+Vanilla CSS with CSS variables. BEM-like naming (component__element--modifier). No utility-first frameworks.
 
 [ROOT_VARIABLES]
-Colors: orange-darker, orange-dark, orange, orange-light, orange-lighter, orange-lightest, blue-darker, blue-dark, blue, blue-light, blue-lighter, blue-lightest, ocean-darker, ocean-dark, ocean, ocean-light, ocean-lighter, ocean-lightest, master-darker, master-dark, master, master-light, master-lighter, master-lightest, pure-white, pure-black.
-Spacing: 0 to 32 (4px increments).
-Font Sizes: xs to 10xl, heroTitle.
-Font Families: principal (Segoe UI), display (Impact).
-Font Weights: regular (400), medium (500), semibold (600), bold (700).
-Line Heights: tight (1.25), normal (1.5), relaxed (1.75).
-Radius: none to 6, pill.
-Shadows: sm, md, lg, xl.
-Z-Index: base to tooltip.
+Spacing: 0 (0), 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (20px), 6 (24px), 8 (32px), 10 (40px), 12 (48px), 16 (64px), 20 (80px), 24 (96px), 32 (128px)
+Colors: orange (darker to lightest), blue (darker to lightest), ocean (darker to lightest), master (darker to lightest), pure-white, pure-black
+Font Size: xs (0.75rem), sm (0.875rem), base (1rem), md (1.125rem), lg (1.25rem), xl (1.5rem), 2xl (2rem), 3xl (2.5rem), 4xl (3rem), 5xl (3.5rem), 6xl (4rem), 7xl (4.5rem), 8xl (5rem), 9xl (5.5rem), 10xl (6rem), heroTitle (11rem)
+Font Family: principal ('Segoe UI'), display (Impact)
+Font Weight: regular (400), medium (500), semibold (600), bold (700)
+Line Height: tight (1.25), normal (1.5), relaxed (1.75)
+Radius: none, 1-5 (4px to 24px), 6 (50%), pill (9999px)
+Shadows: sm, md, lg, xl
+Z-Index: base (0), dropdown (1000), sticky (1100), fixed (1200), modal-backdrop (1300), modal (1400), popover (1500), tooltip (1600)
 
 [PATTERNS]
-- Logic separation using custom hooks.
-- BEM for CSS classes.
-- Path aliases for clean imports.
-- Semantic HTML tags.
+- Logic separation via hooks
+- BEM for CSS
+- Semantic HTML
+- Path aliases for imports
 
 [BUSINESS_RULES]
-- Band founded in 2021 (Guarulhos).
-- Content focuses on authenticity, survival, love, and connection.
-- Musical style is a mix of rock alternativo, rap, MPB, reggae, funky soul.
+- Band "Aotopo" from Guarulhos/SP, founded 2021
+- Musical style: Mix of Rock Alternativo, Rap, Hip Hop, MPB, Reggae
+- Focus: Authenticity, survival, challenges, and human connection
 
 [CONSTRAINTS]
-- Prefer Vanilla CSS over frameworks.
-- Strictly follow component folder structure.
-- Maintain autoLearningPrompt.txt updated after every meaningful change.
+- NO logic in JSX (except extremely simple/declarative)
+- Maintain autoLearningPrompt.txt updated
+- Use Vanilla CSS variables
 
 [DEPENDENCIES]
-react, react-dom, vite, @vitejs/plugin-react, eslint.
+react, react-dom, vite, @vitejs/plugin-react, eslint
